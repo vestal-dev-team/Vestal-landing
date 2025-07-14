@@ -12,7 +12,7 @@ body {
   font-family: 'Inter', sans-serif;
   background-color: #F8F5EE;
   color: #4C2818;
-  line-height: 1.6;
+  line-height: 1.7;
   max-width: 900px;
   margin: auto;
   padding: 2rem 1rem;
@@ -21,27 +21,27 @@ body {
 /* Encabezados */
 h1 {
   font-family: 'Cardo', serif;
-  font-size: 4rem;      /* mucho más grande */
-  text-align: center;   /* centrado */
-  margin-bottom: 1rem;
+  font-size: 5rem;      /* aún más grande */
+  text-align: center;
+  margin-bottom: 1.5rem;
 }
 
 h2 {
   font-family: 'Cardo', serif;
-  font-size: 2.5rem;    /* más grande */
+  font-size: 3rem;      /* más grande */
   margin-bottom: 1rem;
 }
 
 /* Header */
 .site-header {
   display: flex;
-  flex-direction: column;  /* vertical */
-  align-items: center;     /* centrado */
+  flex-direction: column;
+  align-items: center;
   margin-bottom: 3rem;
 }
 
 .logo {
-  width: 150px;            /* logo más grande */
+  width: 200px;         /* logo aún más grande */
   margin-bottom: 1rem;
 }
 
@@ -64,8 +64,8 @@ section {
 }
 
 section p {
-  font-size: 1.125rem;   /* texto más grande */
-  margin-top: 0.5rem;
+  font-size: 1.25rem;   /* texto más grande */
+  margin-top: 0.75rem;
 }
 
 ul {
@@ -74,7 +74,7 @@ ul {
 }
 
 ul li {
-  font-size: 1.125rem;   /* lista más grande */
+  font-size: 1.25rem;
   margin-bottom: 0.5rem;
 }
 
@@ -83,7 +83,7 @@ ul li {
   display: inline-block;
   margin-right: 1rem;
   background-color: #EEE4D0;
-  padding: 0.75rem 1rem;  /* más área clicable */
+  padding: 0.75rem 1.25rem;
   border-radius: 8px;
   transition: transform .2s;
 }
