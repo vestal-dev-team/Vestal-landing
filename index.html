@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
   <meta charset="utf-8" />
   <title>Vestal</title>
   <script>
-    // Si la ruta no es /en/ ni /es/, redirige según idioma del navegador
     const lang = navigator.language.startsWith('es') ? 'es' : 'en';
-    window.location.replace(`./${lang}/`);
+    // Al no llevar slash inicial, apunta a ./en/ o ./es/ dentro de tu repo:
+    window.location.replace(lang + '/');
   </script>
 </head>
-<body>
+<body style="background-color: #F8F5EE; color: #4C2818;">
   <p>Redirigiendo…</p>
 </body>
 </html>
