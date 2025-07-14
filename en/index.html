@@ -5,16 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Vestal</title>
 
-  <!-- Styles & AOS -->
   <link rel="stylesheet" href="../style.css" />
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 </head>
 <body>
   <header class="site-header" data-aos="fade-down">
-    <div style="display:flex; align-items:center;">
-      <img src="../assets/happy.png" alt="Vestal Logo" class="logo" />
-      <h1>Vestal</h1>
-    </div>
+    <img src="../assets/happy.png" alt="Vestal Logo" class="logo" />
+    <h1>Vestal</h1>
     <nav class="lang-switch" data-aos="fade-down" data-aos-delay="100">
       <span>English</span> |
       <a href="../es/">Español</a>
@@ -26,17 +23,18 @@
       <h2>What is Vestal?</h2>
       <p>
         Vestal is the ultimate platform for finding roommates or shared homes.
-        Connect tenants and spaces quickly, securely, and with real compatibility.
+        Enter an existing house ID, submit your application, and if approved,
+        start a private chat and schedule an in-person visit via our built-in calendar.
       </p>
     </section>
 
     <section id="values" data-aos="fade-up" data-aos-delay="100">
       <h2>Values & Goals</h2>
       <ul>
-        <li><strong>Transparency:</strong> All information validated and accessible.</li>
-        <li><strong>Security:</strong> Chats and data protected by modern protocols.</li>
-        <li><strong>Compatibility:</strong> Smart matching for harmonious living.</li>
-        <li><strong>Community:</strong> We foster respect and collaboration.</li>
+        <li><strong>Transparency:</strong> We show verified, up-to-date information at all times.</li>
+        <li><strong>Security:</strong> Encrypted chats and robust data protection.</li>
+        <li><strong>Compatibility:</strong> Smart matching algorithm for harmonious living.</li>
+        <li><strong>Community:</strong> We foster respect, collaboration, and a friendly environment.</li>
       </ul>
     </section>
 
@@ -44,9 +42,9 @@
       <h2>Privacy & Data Handling</h2>
       <p>
         At Vestal we value your privacy. We collect only the data necessary
-        for the platform’s operation and never share it with third parties
-        without your express consent. For more details, see our
-        <a href="#">Privacy Policy</a>.
+        for the platform’s operation and never share it without your consent.
+        For full details, see our 
+        <a href="privacy.html">Privacy Policy</a>.
       </p>
     </section>
 
@@ -68,11 +66,7 @@
   </footer>
 
   <script>
-    AOS.init({
-      once: true,
-      duration: 600,
-      easing: 'ease-out-cubic'
-    });
+    AOS.init({ once: true, duration: 600, easing: 'ease-out-cubic' });
   </script>
 </body>
 </html>

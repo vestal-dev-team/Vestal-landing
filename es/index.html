@@ -5,16 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Vestal</title>
 
-  <!-- Estilos y AOS -->
   <link rel="stylesheet" href="../style.css" />
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 </head>
 <body>
   <header class="site-header" data-aos="fade-down">
-    <div style="display:flex; align-items:center;">
-      <img src="../assets/happy.png" alt="Logo Vestal" class="logo" />
-      <h1>Vestal</h1>
-    </div>
+    <img src="../assets/happy.png" alt="Logo Vestal" class="logo" />
+    <h1>Vestal</h1>
     <nav class="lang-switch" data-aos="fade-down" data-aos-delay="100">
       <a href="../en/">English</a> |
       <span>Español</span>
@@ -26,27 +23,29 @@
       <h2>¿Qué es Vestal?</h2>
       <p>
         Vestal es la plataforma definitiva para encontrar compañeros de piso o casas para compartir.
-        Conecta inquilinos y espacios de forma rápida, segura y basada en compatibilidad real.
+        Permite que cualquier usuario que busque un nuevo hogar ingrese un ID de casa existente y envíe
+        su solicitud para vivir allí. Una vez aprobado por los roommates actuales, se abre un chat
+        privado y se puede agendar una visita al inmueble mediante nuestro calendario integrado.
       </p>
     </section>
 
     <section id="valores" data-aos="fade-up" data-aos-delay="100">
       <h2>Valores y Objetivos</h2>
       <ul>
-        <li><strong>Transparencia:</strong> Toda la información validada y accesible.</li>
-        <li><strong>Seguridad:</strong> Chats y datos protegidos por protocolos modernos.</li>
-        <li><strong>Compatibilidad:</strong> Matching inteligente para convivencias armoniosas.</li>
-        <li><strong>Comunidad:</strong> Fomentamos el respeto y la colaboración.</li>
+        <li><strong>Transparencia:</strong> Mostramos información verificada y actualizada en todo momento.</li>
+        <li><strong>Seguridad:</strong> Chats encriptados y datos guardados con protocolos robustos.</li>
+        <li><strong>Compatibilidad:</strong> Algoritmo de matching inteligente para convivencias armoniosas.</li>
+        <li><strong>Comunidad:</strong> Fomentamos el respeto, la colaboración y un ambiente amigable.</li>
       </ul>
     </section>
 
     <section id="privacidad" data-aos="fade-up" data-aos-delay="200">
       <h2>Términos de Privacidad y Manejo de Datos</h2>
       <p>
-        En Vestal valoramos tu privacidad. Recopilamos únicamente los datos necesarios
-        para el funcionamiento de la plataforma y nunca los compartimos con terceros
-        sin tu consentimiento explícito. Para más detalles, consulta nuestra
-        <a href="#">Política de Privacidad</a>.
+        En Vestal valoramos tu privacidad. Recopilamos únicamente los datos necesarios para el
+        funcionamiento de la plataforma y nunca los compartimos con terceros sin tu consentimiento.
+        Para más detalles, consulta nuestra 
+        <a href="privacy.html">Política de Privacidad</a>.
       </p>
     </section>
 
@@ -68,11 +67,7 @@
   </footer>
 
   <script>
-    AOS.init({
-      once: true,
-      duration: 600,
-      easing: 'ease-out-cubic'
-    });
+    AOS.init({ once: true, duration: 600, easing: 'ease-out-cubic' });
   </script>
 </body>
 </html>

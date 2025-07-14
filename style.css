@@ -1,7 +1,5 @@
 /* Fuentes */
 @import url('https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&display=swap');
-
-/* AOS */
 @import url('https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css');
 
 * {
@@ -21,31 +19,43 @@ body {
 }
 
 /* Encabezados */
-h1, h2 {
+h1 {
   font-family: 'Cardo', serif;
-  color: #4C2818;
-  margin-bottom: 0.5rem;
+  font-size: 4rem;      /* mucho más grande */
+  text-align: center;   /* centrado */
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-family: 'Cardo', serif;
+  font-size: 2.5rem;    /* más grande */
+  margin-bottom: 1rem;
 }
 
 /* Header */
 .site-header {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 2rem;
+  flex-direction: column;  /* vertical */
+  align-items: center;     /* centrado */
+  margin-bottom: 3rem;
 }
 
 .logo {
-  width: 50px;
-  margin-right: 1rem;
+  width: 150px;            /* logo más grande */
+  margin-bottom: 1rem;
+}
+
+/* Switch de idioma */
+.lang-switch {
+  margin-top: 0.5rem;
 }
 
 .lang-switch a,
 .lang-switch span {
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: #4C2818;
   text-decoration: none;
-  margin-left: 0.5rem;
+  margin: 0 0.5rem;
 }
 
 /* Secciones */
@@ -53,14 +63,19 @@ section {
   margin-bottom: 3rem;
 }
 
-section h2 {
-  margin-bottom: 1rem;
+section p {
+  font-size: 1.125rem;   /* texto más grande */
+  margin-top: 0.5rem;
 }
 
-/* Listas */
 ul {
   margin-left: 1.5rem;
   margin-bottom: 1rem;
+}
+
+ul li {
+  font-size: 1.125rem;   /* lista más grande */
+  margin-bottom: 0.5rem;
 }
 
 /* Botones de descarga */
@@ -68,7 +83,7 @@ ul {
   display: inline-block;
   margin-right: 1rem;
   background-color: #EEE4D0;
-  padding: 0.5rem;
+  padding: 0.75rem 1rem;  /* más área clicable */
   border-radius: 8px;
   transition: transform .2s;
 }
@@ -80,12 +95,12 @@ ul {
 /* Footer */
 footer {
   text-align: center;
-  font-size: 0.9rem;
+  font-size: 1rem;
   margin-top: 4rem;
   color: #4C2818;
 }
 
-/* Inicialización AOS */
+/* AOS */
 [data-aos] {
   opacity: 0;
   transition-property: opacity, transform;
@@ -94,4 +109,3 @@ footer {
 [data-aos].aos-animate {
   opacity: 1;
 }
-
