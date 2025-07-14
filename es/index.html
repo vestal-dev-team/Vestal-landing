@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vestal</title>
+
+  <!-- Estilos y AOS -->
+  <link rel="stylesheet" href="../style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+</head>
+<body>
+  <header class="site-header" data-aos="fade-down">
+    <div style="display:flex; align-items:center;">
+      <img src="../flami.png" alt="Logo Vestal" class="logo" />
+      <h1>Vestal</h1>
+    </div>
+    <nav class="lang-switch" data-aos="fade-down" data-aos-delay="100">
+      <a href="../en/">English</a> |
+      <span>Español</span>
+    </nav>
+  </header>
+
+  <main>
+    <section id="descripcion" data-aos="fade-up">
+      <h2>¿Qué es Vestal?</h2>
+      <p>
+        Vestal es la plataforma definitiva para encontrar compañeros de piso o casas para compartir.
+        Conecta inquilinos y espacios de forma rápida, segura y basada en compatibilidad real.
+      </p>
+    </section>
+
+    <section id="valores" data-aos="fade-up" data-aos-delay="100">
+      <h2>Valores y Objetivos</h2>
+      <ul>
+        <li><strong>Transparencia:</strong> Toda la información validada y accesible.</li>
+        <li><strong>Seguridad:</strong> Chats y datos protegidos por protocolos modernos.</li>
+        <li><strong>Compatibilidad:</strong> Matching inteligente para convivencias armoniosas.</li>
+        <li><strong>Comunidad:</strong> Fomentamos el respeto y la colaboración.</li>
+      </ul>
+    </section>
+
+    <section id="privacidad" data-aos="fade-up" data-aos-delay="200">
+      <h2>Términos de Privacidad y Manejo de Datos</h2>
+      <p>
+        En Vestal valoramos tu privacidad. Recopilamos únicamente los datos necesarios
+        para el funcionamiento de la plataforma y nunca los compartimos con terceros
+        sin tu consentimiento explícito. Para más detalles, consulta nuestra
+        <a href="#">Política de Privacidad</a>.
+      </p>
+    </section>
+
+    <section id="descargas" data-aos="fade-up" data-aos-delay="300">
+      <h2>Descarga la App</h2>
+      <div class="store-buttons">
+        <a href="https://apps.apple.com/app/idTU_APP_ID" target="_blank" aria-label="Descarga en App Store">
+          <img src="../assets/apple.svg" alt="App Store" width="32" />
+        </a>
+        <a href="https://play.google.com/store/apps/details?id=TU_APP_PACKAGE" target="_blank" aria-label="Descarga en Google Play">
+          <img src="../assets/android.svg" alt="Google Play" width="32" />
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer data-aos="fade-up" data-aos-delay="400">
+    <p>&copy; 2025 Vestal. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    AOS.init({
+      once: true,
+      duration: 600,
+      easing: 'ease-out-cubic'
+    });
+  </script>
+</body>
+</html>

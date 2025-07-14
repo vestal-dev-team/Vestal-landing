@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Vestal</title>
+  <script>
+    // Si la ruta no es /en/ ni /es/, redirige según idioma del navegador
+    const lang = navigator.language.startsWith('es') ? 'es' : 'en';
+    window.location.replace(`/${lang}/`);
+  </script>
+</head>
+<body>
+  <p>Redirigiendo…</p>
+</body>
+</html>

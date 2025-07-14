@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vestal</title>
+
+  <!-- Styles & AOS -->
+  <link rel="stylesheet" href="../style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+</head>
+<body>
+  <header class="site-header" data-aos="fade-down">
+    <div style="display:flex; align-items:center;">
+      <img src="../flami.png" alt="Vestal Logo" class="logo" />
+      <h1>Vestal</h1>
+    </div>
+    <nav class="lang-switch" data-aos="fade-down" data-aos-delay="100">
+      <span>English</span> |
+      <a href="../es/">Español</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="description" data-aos="fade-up">
+      <h2>What is Vestal?</h2>
+      <p>
+        Vestal is the ultimate platform for finding roommates or shared homes.
+        Connect tenants and spaces quickly, securely, and with real compatibility.
+      </p>
+    </section>
+
+    <section id="values" data-aos="fade-up" data-aos-delay="100">
+      <h2>Values & Goals</h2>
+      <ul>
+        <li><strong>Transparency:</strong> All information validated and accessible.</li>
+        <li><strong>Security:</strong> Chats and data protected by modern protocols.</li>
+        <li><strong>Compatibility:</strong> Smart matching for harmonious living.</li>
+        <li><strong>Community:</strong> We foster respect and collaboration.</li>
+      </ul>
+    </section>
+
+    <section id="privacy" data-aos="fade-up" data-aos-delay="200">
+      <h2>Privacy & Data Handling</h2>
+      <p>
+        At Vestal we value your privacy. We collect only the data necessary
+        for the platform’s operation and never share it with third parties
+        without your express consent. For more details, see our
+        <a href="#">Privacy Policy</a>.
+      </p>
+    </section>
+
+    <section id="download" data-aos="fade-up" data-aos-delay="300">
+      <h2>Download the App</h2>
+      <div class="store-buttons">
+        <a href="https://apps.apple.com/app/idYOUR_APP_ID" target="_blank" aria-label="Download on the App Store">
+          <img src="../assets/apple.svg" alt="App Store" width="32" />
+        </a>
+        <a href="https://play.google.com/store/apps/details?id=YOUR_APP_PACKAGE" target="_blank" aria-label="Get it on Google Play">
+          <img src="../assets/android.svg" alt="Google Play" width="32" />
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer data-aos="fade-up" data-aos-delay="400">
+    <p>&copy; 2025 Vestal. All rights reserved.</p>
+  </footer>
+
+  <script>
+    AOS.init({
+      once: true,
+      duration: 600,
+      easing: 'ease-out-cubic'
+    });
+  </script>
+</body>
+</html>

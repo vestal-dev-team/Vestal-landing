@@ -1,0 +1,97 @@
+/* Fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&display=swap');
+
+/* AOS */
+@import url('https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #F8F5EE;
+  color: #4C2818;
+  line-height: 1.6;
+  max-width: 900px;
+  margin: auto;
+  padding: 2rem 1rem;
+}
+
+/* Encabezados */
+h1, h2 {
+  font-family: 'Cardo', serif;
+  color: #4C2818;
+  margin-bottom: 0.5rem;
+}
+
+/* Header */
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.logo {
+  width: 50px;
+  margin-right: 1rem;
+}
+
+.lang-switch a,
+.lang-switch span {
+  font-size: 0.9rem;
+  color: #4C2818;
+  text-decoration: none;
+  margin-left: 0.5rem;
+}
+
+/* Secciones */
+section {
+  margin-bottom: 3rem;
+}
+
+section h2 {
+  margin-bottom: 1rem;
+}
+
+/* Listas */
+ul {
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Botones de descarga */
+.store-buttons a {
+  display: inline-block;
+  margin-right: 1rem;
+  background-color: #EEE4D0;
+  padding: 0.5rem;
+  border-radius: 8px;
+  transition: transform .2s;
+}
+
+.store-buttons a:hover {
+  transform: translateY(-3px);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: 4rem;
+  color: #4C2818;
+}
+
+/* Inicialización AOS */
+[data-aos] {
+  opacity: 0;
+  transition-property: opacity, transform;
+}
+
+[data-aos].aos-animate {
+  opacity: 1;
+}
+
