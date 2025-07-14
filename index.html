@@ -6,7 +6,7 @@
   <script>
     // Si la ruta no es /en/ ni /es/, redirige según idioma del navegador
     const lang = navigator.language.startsWith('es') ? 'es' : 'en';
-    window.location.replace(`/${lang}/`);
+    window.location.replace(`./${lang}/`);
   </script>
 </head>
 <body>
