@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vestal - Prueba de Redirección</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <img src="assets/happy.png" alt="Vestal Logo" class="logo" />
+    <h1>Vestal - Prueba de Redirección</h1>
+  </header>
+
+  <main style="max-width: 600px; margin: 0 auto; padding: 20px;">
+    <section>
+      <h2>Prueba la funcionalidad de redirección</h2>
+      <p>Introduce un ID de Vestal para probar la redirección:</p>
+      
+      <div style="margin: 20px 0;">
+        <label for="vestId">ID de Vestal (formato: vest12345):</label><br>
+        <input type="text" id="vestId" placeholder="vest12345" pattern="vest\d{5}" style="padding: 10px; margin: 10px 0; width: 200px;">
+        <button onclick="testRedirect()" style="padding: 10px 20px; background: #4C2818; color: white; border: none; border-radius: 5px; cursor: pointer;">Probar Redirección</button>
+      </div>
+      
+      <div id="result" style="margin: 20px 0; padding: 15px; background: #f5f5f5; border-radius: 5px; display: none;">
+        <h3>Resultado:</h3>
+        <p id="resultText"></p>
+        <p><strong>URL generada:</strong> <span id="generatedUrl" style="font-family: monospace; word-break: break-all;"></span></p>
+      </div>
+    </section>
+
+    <section style="margin-top: 40px;">
+      <h3>Ejemplos de URLs que funcionarán:</h3>
+      <ul>
+        <li><a href="/vest12345" target="_blank">yourdomain.com/vest12345</a></li>
+        <li><a href="/vest00001" target="_blank">yourdomain.com/vest00001</a></li>
+        <li><a href="/vest99999" target="_blank">yourdomain.com/vest99999</a></li>
+      </ul>
+      
+      <h3>Ejemplos de URLs que NO funcionarán:</h3>
+      <ul style="color: #666;">
+        <li>yourdomain.com/vest123 (menos de 5 dígitos)</li>
+        <li>yourdomain.com/vest123456 (más de 5 dígitos)</li>
+        <li>yourdomain.com/house12345 (no empieza con "vest")</li>
+      </ul>
+    </section>
+  </main>
+
+  <script>
+    function testRedirect() {
+      const vestId = document.getElementById('vestId').value;
+      const resultDiv = document.getElementById('result');
+      const resultText = document.getElementById('resultText');
+      const generatedUrl = document.getElementById('generatedUrl');
+      
+      // Validar formato
+      const vestPattern = /^vest\d{5}$/;
+      
+      if (!vestPattern.test(vestId)) {
+        resultText.textContent = '❌ Formato inválido. Debe ser "vest" seguido de exactamente 5 dígitos.';
+        generatedUrl.textContent = 'N/A';
+        resultText.style.color = 'red';
+      } else {
+        const customUrl = `vestal://houseURL?vestalID=${vestId}`;
+        resultText.textContent = '✅ Formato válido. La redirección funcionaría correctamente.';
+        generatedUrl.textContent = customUrl;
+        resultText.style.color = 'green';
+        
+        // Crear un enlace de prueba
+        const testLink = document.createElement('a');
+        testLink.href = `/${vestId}`;
+        testLink.textContent = `Probar redirección real: /${vestId}`;
+        testLink.target = '_blank';
+        testLink.style.display = 'block';
+        testLink.style.marginTop = '10px';
+        testLink.style.color = '#4C2818';
+        
+        // Limpiar enlaces previos
+        const existingLink = resultDiv.querySelector('a');
+        if (existingLink) existingLink.remove();
+        
+        resultDiv.appendChild(testLink);
+      }
+      
+      resultDiv.style.display = 'block';
+    }
+    
+    // Permitir probar con Enter
+    document.getElementById('vestId').addEventListener('keypress', function(e) {
+      if (e.key === 'Enter') {
+        testRedirect();
+      }
+    });
+  </script>
+</body>
+</html>

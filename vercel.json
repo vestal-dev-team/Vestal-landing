@@ -1,0 +1,13 @@
+{
+  "functions": {
+    "api/[id].js": {
+      "maxDuration": 10
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/(vest\\d{5})",
+      "destination": "/api/$1"
+    }
+  ]
+}
