@@ -1,0 +1,16 @@
+{
+  "name": "vestal-landing",
+  "version": "1.0.0",
+  "description": "Vestal deep link landing page",
+  "type": "module",
+  "scripts": {
+    "dev": "vercel dev",
+    "build": "vercel build",
+    "deploy": "vercel"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "engines": {
+    "node": ">=14"
+  }
+}
