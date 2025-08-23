@@ -1,0 +1,12 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appID": "TEAMID.com.vestal.app",
+        "paths": [
+          "/vest*"
+        ]
+      }
+    ]
+  }
+}

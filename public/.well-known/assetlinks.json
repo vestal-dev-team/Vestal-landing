@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.vestal.app",
+      "sha256_cert_fingerprints": [
+        "9D:BB:91:F5:1E:B6:02:A2:04:80:F7:7E:8E:3C:82:86:69:C5:DD:70:5D:22:B8:C3:14:B8:80:8E:E4:BC:5F:52"
+      ]
+    }
+  }
+]

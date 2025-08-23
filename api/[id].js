@@ -21,7 +21,8 @@ export default function handler(req, res) {
   }
 
   const code = id;
-  const deepLink = `vestal://router?target=house&code=${encodeURIComponent(code)}`;
+const deepLink = `vestal://vest/${encodeURIComponent(code)}`;
+
 
   const isAndroid = /android/.test(ua);
   const isIOS = /iphone|ipad|ipod/.test(ua);
@@ -32,7 +33,7 @@ export default function handler(req, res) {
 
   // Intent URL específico de Android/Chrome con fallback nativo a Play Store
   const intentURL =
-    `intent://router?target=house&code=${encodeURIComponent(code)}` +
+    `vestal://vest/${encodeURIComponent(code)}` +
     `#Intent;scheme=vestal;package=${ANDROID_PACKAGE};` +
     `S.browser_fallback_url=${encodeURIComponent(playStoreURL)};end`;
 
