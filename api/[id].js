@@ -20,7 +20,7 @@ export default function handler(req, res) {
     });
   }
 
-  const code = `vest${id}`;
+  const code = `${id}`;
   const deepLink = `vestal://vest/${encodeURIComponent(code)}`;
 
   const isAndroid = /android/.test(ua);
