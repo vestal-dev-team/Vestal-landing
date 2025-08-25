@@ -13,7 +13,7 @@ export default function handler(req, res) {
   const ANDROID_PACKAGE = 'com.vestal.app';// package name Android
 
   // 1) Validación del ID
-  const vestPattern = /^vest\d{5}$/;
+  const vestPattern = /^\d{5}$/;
   if (!id || !vestPattern.test(id)) {
     return res.status(404).json({
       error: 'Invalid ID format. Expected format: vest12345 (vest + 5 digits)',
@@ -21,8 +21,7 @@ export default function handler(req, res) {
   }
 
   const code = id;
-const deepLink = `vestal://vest/${encodeURIComponent(code)}`;
-
+  const deepLink = `vestal://vest/${encodeURIComponent(code)}`;
 
   const isAndroid = /android/.test(ua);
   const isIOS = /iphone|ipad|ipod/.test(ua);
