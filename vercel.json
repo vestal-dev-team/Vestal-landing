@@ -23,5 +23,12 @@
         { "key": "Content-Type", "value": "application/json" }
       ]
     }
+  ], 
+    "redirects": [
+    {
+      "source": "/vest:id(\\d+)",
+      "destination": "/vest/:id",
+      "permanent": false
+    }
   ]
 }

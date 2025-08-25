@@ -33,7 +33,7 @@ const deepLink = `vestal://vest/${encodeURIComponent(code)}`;
 
   // Intent URL específico de Android/Chrome con fallback nativo a Play Store
   const intentURL =
-    `vestal://vest/vest/${encodeURIComponent(code)}` +
+    `vestal://vest/${encodeURIComponent(code)}` +
     `#Intent;scheme=vestal;package=${ANDROID_PACKAGE};` +
     `S.browser_fallback_url=${encodeURIComponent(playStoreURL)};end`;
 
