@@ -6,7 +6,7 @@
   },
   "rewrites": [
     {
-      "source": "/(vest\\d{5})",
+      "source": "/vest/(\\d{5})",
       "destination": "/api/$1"
     }
   ],
@@ -22,13 +22,6 @@
       "headers": [
         { "key": "Content-Type", "value": "application/json" }
       ]
-    }
-  ], 
-    "redirects": [
-    {
-      "source": "/vest:id(\\d+)",
-      "destination": "/vest/:id",
-      "permanent": false
     }
   ]
 }
