@@ -1,0 +1,283 @@
+{
+  "expectations.category.lifestyle": { "en": "Lifestyle & Routines", "es": "Estilo de Vida y Rutinas" },
+  "expectations.category.sharedSpace": { "en": "Shared Space", "es": "Espacio Compartido" },
+  "expectations.category.socialLife": { "en": "Social Life", "es": "Vida social" },
+  "expectations.category.cleanliness": { "en": "Order & Cleanliness", "es": "Orden y Limpieza" },
+  "expectations.category.values": { "en": "Personality & Values", "es": "Personalidad y Valores" },
+  "expectations.category.expenses": { "en": "Shared Expenses & Resources", "es": "Gastos y Recursos Comunes" },
+
+  "expectations.desc_lifestyle": {
+    "en": "Covers daily habits, schedules, sleep, remote-work routines, and how weekdays vs. weekends are handled.",
+    "es": "Abarca hábitos diarios, horarios, descanso, rutinas de teletrabajo y cómo se gestionan entre semana y fines de semana."
+  },
+  "expectations.desc_sharedSpace": {
+    "en": "Sets expectations for how common areas are used—kitchen, bathroom, balcony—guests, ventilation, and decor.",
+    "es": "Establece expectativas sobre el uso de espacios comunes (cocina, baño, balcón), visitas, ventilación y decoración."
+  },
+  "expectations.desc_socialLife": {
+    "en": "Defines how you like to socialize at home: gatherings, game nights, match nights, and plans together or out.",
+    "es": "Define cómo te gusta socializar en casa: reuniones, tardes de juegos, noches de partido y planes dentro o fuera."
+  },
+  "expectations.desc_cleanliness": {
+    "en": "Clarifies how cleaning is organized, tidiness standards, dishwashing, trash, and post-party cleanup.",
+    "es": "Aclara cómo se organiza la limpieza, los estándares de orden, los platos, la basura y la recogida tras reuniones."
+  },
+  "expectations.desc_values": {
+    "en": "Communicates conflict styles, communication preferences, personal space, and household norms like smoking or pets.",
+    "es": "Comunica estilos para gestionar conflictos, preferencias de comunicación, espacio personal y normas (tabaco, mascotas)."
+  },
+  "expectations.desc_expenses": {
+    "en": "Explains how shared expenses and resources are handled—supplies, utilities, heating/cooling habits, and shopping.",
+    "es": "Explica cómo se gestionan los gastos y recursos comunes: suministros, facturas, hábitos de calefacción/AC y compras."
+  },
+
+  "expectations.lifestyle_1": {
+    "es": "Me gustaría que en el piso no se hiciera ruido cuando...",
+    "en": "I'd like there to be no noise in the flat when..."
+  },
+  "expectations.lifestyle_2": {
+    "es": "Entre semana por la noche, ¿plan de peli o a descansar pronto?",
+    "en": "On weeknights: movie plan or early to bed?"
+  },
+  "expectations.lifestyle_3": {
+    "es": "Si uno necesita silencio para estudiar, lo ideal sería…",
+    "en": "If someone needs silence to study, ideally we would…"
+  },
+  "expectations.lifestyle_4": {
+    "es": "Si me despiertan a las 6 a. m. y parece que mi compañero está bien acompañado...",
+    "en": "If I'm woken up at 6 a.m. and it seems my roommate has company..."
+  },
+  "expectations.lifestyle_5": {
+    "es": "Me gusta que cuando volvemos de trabajar, para desconectar...",
+    "en": "When we get back from work, to unwind I like to..."
+  },
+  "expectations.lifestyle_6": {
+    "es": "Día de teletrabajo con los compañeros del piso, qué tal si...",
+    "en": "On a work-from-home day with my roommates, how about we..."
+  },
+  "expectations.lifestyle_7": {
+    "es": "Un domingo por la mañana podríamos echar un partido de…",
+    "en": "On a Sunday morning we could play a game of…"
+  },
+  "expectations.lifestyle_8": {
+    "es": "El sábado por la mañana, ¿deporte pronto con los del piso o un desayuno rico?",
+    "en": "Saturday morning: early workout with the flatmates or a nice breakfast?"
+  },
+  "expectations.lifestyle_9": {
+    "es": "Sabrás que soy un ave nocturna...",
+    "en": "You'll know I'm a night owl when..."
+  },
+  "expectations.lifestyle_10": {
+    "es": "Cuando yo teletrabajo en casa, me gustaría que el resto...",
+    "en": "When I'm working from home, I'd like the others to..."
+  },
+
+  "expectations.sharedSpace_1": {
+    "es": "Si coincidimos todos en la cocina a la hora de cenar...",
+    "en": "If we all end up in the kitchen at dinner time..."
+  },
+  "expectations.sharedSpace_2": {
+    "es": "Si alguien trae a su pareja varias noches seguidas prefiero que...",
+    "en": "If someone brings their partner over several nights in a row, I'd prefer that..."
+  },
+  "expectations.sharedSpace_3": {
+    "es": "Para la decoración de casa yo soy de...",
+    "en": "For home decor I'm the type who..."
+  },
+  "expectations.sharedSpace_4": {
+    "es": "Si vienen a casa familia o amigos un finde sería guay que...",
+    "en": "If family or friends come over for a weekend, it would be cool if..."
+  },
+  "expectations.sharedSpace_5": {
+    "es": "Si mi compañero quiere traer a alguien a dormir...",
+    "en": "If my roommate wants to have someone stay the night..."
+  },
+  "expectations.sharedSpace_6": {
+    "es": "En casa soy más de tener las ventanas abiertas para ventilar o cerradas para mantener el calor...",
+    "en": "At home I prefer windows open to ventilate, or closed to keep the heat in..."
+  },
+  "expectations.sharedSpace_7": {
+    "es": "El balcón/terraza lo disfrutamos mejor si…",
+    "en": "We enjoy the balcony/terrace best if…"
+  },
+  "expectations.sharedSpace_8": {
+    "es": "Si mi compañero deja la ventana abierta en pleno invierno...",
+    "en": "If my roommate leaves the window open in the middle of winter..."
+  },
+  "expectations.sharedSpace_9": {
+    "es": "Si hay visitas en casa, para mí es importante...",
+    "en": "If there are guests at home, it's important to me to..."
+  },
+  "expectations.sharedSpace_10": {
+    "es": "Llega la Navidad, en casa yo soy de...",
+    "en": "When Christmas comes, at home I'm the type who..."
+  },
+  "expectations.sharedSpace_11": {
+    "es": "Si vienen mis colegas a casa, ¿avisamos con antelación o vamos fluyendo?",
+    "en": "If my mates are coming over, do we give advance notice or just go with the flow?"
+  },
+  "expectations.sharedSpace_12": {
+    "es": "Para organizarnos a la hora de usar el baño...",
+    "en": "To organize ourselves when using the bathroom..."
+  },
+  "expectations.sharedSpace_13": {
+    "es": "Cuando queremos cocinar varios a la vez...",
+    "en": "When several of us want to cook at the same time..."
+  },
+
+  "expectations.socialLife_1": {
+    "es": "Un domingo después de comer te voy a proponer...",
+    "en": "On a Sunday after lunch I'm going to suggest..."
+  },
+  "expectations.socialLife_2": {
+    "es": "Si montamos comida en grupo, yo me encargo de...",
+    "en": "If we set up a group meal, I'll take care of..."
+  },
+  "expectations.socialLife_3": {
+    "es": "Para el cumpleaños de uno del piso, soy el que...",
+    "en": "For a flatmate's birthday, I'm the one who..."
+  },
+  "expectations.socialLife_4": {
+    "es": "Para cumpleaños, ¿sorpresa o avisamos y nos organizamos?",
+    "en": "For birthdays, surprise or do we tell people and organize?"
+  },
+  "expectations.socialLife_5": {
+    "es": "Si hacemos tarde de juegos, lo que más me gusta es…",
+    "en": "If we have a game night, what I like most is…"
+  },
+  "expectations.socialLife_6": {
+    "es": "Mi plan ideal de domingo tarde con mis compañeros es...",
+    "en": "My ideal Sunday afternoon plan with my roommates is..."
+  },
+  "expectations.socialLife_7": {
+    "es": "Si es viernes y mi compañero organiza una previa en casa, suelo...",
+    "en": "If it's Friday and my roommate hosts pre-drinks at home, I usually..."
+  },
+  "expectations.socialLife_8": {
+    "es": "Si oigo la puerta de la casa con mi compañero y más gente, yo soy de...",
+    "en": "If I hear the front door with my roommate and more people, I'm the type to..."
+  },
+  "expectations.socialLife_9": {
+    "es": "Noche de Champions, soy de los que propone...",
+    "en": "Champions League night—I'm the one who suggests..."
+  },
+  "expectations.socialLife_10": {
+    "es": "Un sábado por la noche, ¿juegos de mesa o salimos todos?",
+    "en": "On a Saturday night, board games or we all go out?"
+  },
+  "expectations.socialLife_11": {
+    "es": "Viernes noche, ¿bebemos en casa o en el bar de abajo?",
+    "en": "Friday night: do we drink at home or at the bar downstairs?"
+  },
+  "expectations.socialLife_12": {
+    "es": "Mi plan de puente con mis compañeros perfecto sería...",
+    "en": "My perfect long-weekend plan with my roommates would be..."
+  },
+  "expectations.socialLife_13": {
+    "es": "Mi plan ideal de domingo tarde con los del piso...",
+    "en": "My ideal Sunday afternoon plan with the flatmates is..."
+  },
+
+  "expectations.cleanliness_1": {
+    "es": "Para la limpieza, ¿prefiero contratar a alguien o nos encargamos nosotros?",
+    "en": "For cleaning, do I prefer we hire someone or we handle it ourselves?"
+  },
+  "expectations.cleanliness_2": {
+    "es": "Para limpiar el piso, ¿organizamos por turnos o limpiamos según se ensucia?",
+    "en": "For cleaning the flat, do we organize by turns or clean as it gets dirty?"
+  },
+  "expectations.cleanliness_3": {
+    "es": "La basura orgánica, ¿la baja quien la llene o turnos fijos?",
+    "en": "Organic trash: does the person who fills it take it out, or fixed turns?"
+  },
+  "expectations.cleanliness_4": {
+    "es": "Para gestionar las tareas de la casa prefiero...",
+    "en": "To manage household chores I prefer to..."
+  },
+  "expectations.cleanliness_5": {
+    "es": "Si me levanto y la casa sigue llena de vasos y basura de la noche anterior...",
+    "en": "If I get up and the house is still full of cups and trash from the night before..."
+  },
+  "expectations.cleanliness_6": {
+    "es": "Cuando alguien deja platos en el fregadero varios días...",
+    "en": "When someone leaves dishes in the sink for several days..."
+  },
+  "expectations.cleanliness_7": {
+    "es": "¿Mejor limpiar según cocinas o después de comer?",
+    "en": "Better to clean as you cook, or after eating?"
+  },
+
+  "expectations.values_1": {
+    "es": "Si surge un conflicto con los del piso...",
+    "en": "If a conflict arises with the flatmates..."
+  },
+  "expectations.values_2": {
+    "es": "Soy el típico que cuando hay plan y alguien no está en el mood...",
+    "en": "I'm the type who, when there's a plan and someone isn't in the mood, I..."
+  },
+  "expectations.values_3": {
+    "es": "Si uno del piso está mal anímicamente...",
+    "en": "If one of the flatmates is feeling down..."
+  },
+  "expectations.values_4": {
+    "es": "Si meto la pata, la forma en que prefiero que me lo digáis es...",
+    "en": "If I mess up, the way I'd prefer you tell me is..."
+  },
+  "expectations.values_5": {
+    "es": "Cuando alguno está de bajón, para animarle soy de...",
+    "en": "When someone is feeling low, to cheer them up I'm the type to..."
+  },
+  "expectations.values_6": {
+    "es": "Si en casa surge una discusión de política, yo normalmente...",
+    "en": "If a political discussion comes up at home, I usually..."
+  },
+  "expectations.values_7": {
+    "es": "Me motiva convivir con personas que...",
+    "en": "I'm motivated to live with people who..."
+  },
+  "expectations.values_8": {
+    "es": "Cuando hablamos de cosas de la casa, me gusta que la comunicación sea...",
+    "en": "When we talk about house matters, I like communication to be..."
+  },
+  "expectations.values_9": {
+    "es": "Cuando algo me molesta en la convivencia, ¿soy más de adaptarme o de comunicar las cosas?",
+    "en": "When something bothers me in co-living, am I more likely to adapt or to communicate it?"
+  },
+  "expectations.values_10": {
+    "es": "Sabréis si necesito mi espacio personal cuando...",
+    "en": "You'll know I need my personal space when..."
+  },
+  "expectations.values_11": {
+    "es": "Con las parejas de la gente del piso, prefiero que...",
+    "en": "Regarding people's partners in the flat, I prefer that..."
+  },
+  "expectations.values_12": {
+    "es": "Te encuentras a tu compañero fumando en el salón...",
+    "en": "You find your roommate smoking in the living room..."
+  },
+  "expectations.values_13": {
+    "es": "Si uno del piso entra con una mascota para el piso...",
+    "en": "If one of the flatmates brings a pet into the flat..."
+  },
+
+  "expectations.expenses_1": {
+    "es": "Se acabó el papel, ¿lo repongo o entra en la compra común?",
+    "en": "We're out of toilet paper—do I replace it or is it part of the shared shop?"
+  },
+  "expectations.expenses_2": {
+    "es": "Para que repartamos los gastos de forma justa...",
+    "en": "So that we split expenses fairly..."
+  },
+  "expectations.expenses_3": {
+    "es": "En invierno, entre subir la calefacción o tirar de mantas, yo…",
+    "en": "In winter, between turning up the heating or grabbing blankets, I..."
+  },
+  "expectations.expenses_4": {
+    "es": "En verano, entre aire acondicionado y ventanas abiertas, suelo…",
+    "en": "In summer, between air conditioning and open windows, I usually..."
+  },
+  "expectations.expenses_5": {
+    "es": "Para la compra de las cosas comunes, ¿lo organizamos o vamos fluyendo?",
+    "en": "For buying shared items, do we organize it or just go with the flow?"
+  }
+}

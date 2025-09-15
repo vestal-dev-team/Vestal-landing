@@ -1,0 +1,111 @@
+/* Fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&display=swap');
+@import url('https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #F8F5EE;
+  color: #4C2818;
+  line-height: 1.7;
+  max-width: 900px;
+  margin: auto;
+  padding: 2rem 1rem;
+}
+
+/* Encabezados */
+h1 {
+  font-family: 'Cardo', serif;
+  font-size: 5rem;      /* aún más grande */
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+h2 {
+  font-family: 'Cardo', serif;
+  font-size: 3rem;      /* más grande */
+  margin-bottom: 1rem;
+}
+
+/* Header */
+.site-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.logo {
+  width: 200px;         /* logo aún más grande */
+  margin-bottom: 1rem;
+}
+
+/* Switch de idioma */
+.lang-switch {
+  margin-top: 0.5rem;
+}
+
+.lang-switch a,
+.lang-switch span {
+  font-size: 1rem;
+  color: #4C2818;
+  text-decoration: none;
+  margin: 0 0.5rem;
+}
+
+/* Secciones */
+section {
+  margin-bottom: 3rem;
+}
+
+section p {
+  font-size: 1.25rem;   /* texto más grande */
+  margin-top: 0.75rem;
+}
+
+ul {
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+ul li {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Botones de descarga */
+.store-buttons a {
+  display: inline-block;
+  margin-right: 1rem;
+  background-color: #EEE4D0;
+  padding: 0.75rem 1.25rem;
+  border-radius: 8px;
+  transition: transform .2s;
+}
+
+.store-buttons a:hover {
+  transform: translateY(-3px);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  font-size: 1rem;
+  margin-top: 4rem;
+  color: #4C2818;
+}
+
+/* AOS */
+[data-aos] {
+  opacity: 0;
+  transition-property: opacity, transform;
+}
+
+[data-aos].aos-animate {
+  opacity: 1;
+}

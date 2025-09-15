@@ -1,0 +1,65 @@
+/* Radio button group for categories */
+.category-radio-group {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.category-radio {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  position: relative;
+}
+
+.category-radio:hover {
+  background-color: #faf8f7;
+}
+
+.category-radio input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.radio-custom {
+  width: 18px;
+  height: 18px;
+  border: 2px solid #e6e2df;
+  border-radius: 50%;
+  position: relative;
+  transition: all 0.2s;
+}
+
+.category-radio input[type="radio"]:checked + .radio-custom {
+  border-color: #8D6E53;
+  background-color: #8D6E53;
+}
+
+.category-radio input[type="radio"]:checked + .radio-custom::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 6px;
+  height: 6px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.category-icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.category-label {
+  font: 500 14px/1.2 Roboto, system-ui, -apple-system, Segoe UI, Arial, sans-serif;
+  color: #4C2818;
+}

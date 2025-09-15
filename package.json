@@ -4,6 +4,7 @@
   "description": "Vestal deep link landing page",
   "type": "module",
   "scripts": {
+    "build": "cd editor && npm install && npm run build && cd .. && mkdir -p public/editor-app && cp -r editor-dist/* public/editor-app/ && cp -r api public/ && cp -r en public/ && cp -r es public/ && cp index.html public/ && cp style.css public/ && cp test-redirect.html public/ || true"
   },
   "dependencies": {},
   "devDependencies": {},
