@@ -61,16 +61,22 @@ const EditorPage: React.FC = () => {
   const downloadPng = async () => {
     if (!cardRef.current) return
     try {
+      // Configuración optimizada para compatibilidad cross-browser
       const dataUrl = await toPng(cardRef.current, {
         cacheBust: true,
-        pixelRatio: 2,
+        pixelRatio: window.devicePixelRatio || 2,
         backgroundColor: 'transparent',
-        width: cardRef.current.scrollWidth,
-        height: cardRef.current.scrollHeight,
-        skipFonts: false, // Usar fuentes locales
+        width: cardRef.current.offsetWidth,
+        height: cardRef.current.offsetHeight,
+        skipFonts: false,
+        includeQueryParams: true,
+        imagePlaceholder: 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMSIgaGVpZ2h0PSIxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InRyYW5zcGFyZW50Ii8+PC9zdmc+',
         filter: (node) => {
-          // Filtrar solo enlaces externos que puedan causar problemas CORS
-          if (node instanceof HTMLLinkElement && node.href.includes('fonts.googleapis.com')) {
+          // Filtrar elementos problemáticos para Safari/Firefox
+          if (node instanceof HTMLLinkElement) {
+            return false
+          }
+          if (node instanceof HTMLStyleElement && node.innerHTML.includes('@import')) {
             return false
           }
           return true
@@ -82,9 +88,30 @@ const EditorPage: React.FC = () => {
       a.click()
     } catch (e) {
       console.error('PNG export error:', e)
-      alert(lang === 'es' 
-        ? 'No he podido generar la imagen. Inténtalo de nuevo.' 
-        : 'Could not generate the image. Please try again.')
+      // Fallback específico para Safari/Firefox
+      try {
+        console.log('Intentando fallback para Safari/Firefox...')
+        const fallbackDataUrl = await toPng(cardRef.current, {
+          cacheBust: false,
+          pixelRatio: 1,
+          backgroundColor: '#ffffff',
+          skipFonts: true,
+          style: {
+            fontFamily: 'system-ui, -apple-system, sans-serif',
+            transform: 'scale(1)',
+            transformOrigin: 'top left'
+          }
+        })
+        const a = document.createElement('a')
+        a.href = fallbackDataUrl
+        a.download = 'expectation.png'
+        a.click()
+      } catch (fallbackError) {
+        console.error('Fallback PNG export error:', fallbackError)
+        alert(lang === 'es' 
+          ? 'No he podido generar la imagen. Este navegador puede tener limitaciones. Prueba con Chrome o descarga manualmente.' 
+          : 'Could not generate the image. This browser may have limitations. Try Chrome or download manually.')
+      }
     }
   }
 
