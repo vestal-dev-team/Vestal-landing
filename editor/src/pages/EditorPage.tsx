@@ -33,9 +33,55 @@ const EditorPage: React.FC = () => {
   // elemento a exportar
   const cardRef = useRef<HTMLDivElement>(null)
 
+  // estado para controlar si las imágenes están cargadas
+  const [imagesLoaded, setImagesLoaded] = useState<boolean>(false)
+
   useEffect(() => {
     AOS.init({ once: true, duration: 600, easing: 'ease-out-cubic' })
   }, [])
+
+  // Efecto para verificar cuando todas las imágenes están cargadas
+  useEffect(() => {
+    const checkImagesLoaded = () => {
+      if (!cardRef.current) return
+      
+      const images = cardRef.current.querySelectorAll('img')
+      if (images.length === 0) {
+        setImagesLoaded(true)
+        return
+      }
+      
+      const allLoaded = Array.from(images).every(img => 
+        img.complete && img.naturalHeight !== 0
+      )
+      
+      setImagesLoaded(allLoaded)
+      
+      if (!allLoaded) {
+        // Si no todas están cargadas, configurar listeners
+        images.forEach(img => {
+          const handleLoad = () => {
+            checkImagesLoaded()
+            img.removeEventListener('load', handleLoad)
+            img.removeEventListener('error', handleLoad)
+          }
+          
+          if (!img.complete || img.naturalHeight === 0) {
+            img.addEventListener('load', handleLoad)
+            img.addEventListener('error', handleLoad)
+          }
+        })
+      }
+    }
+    
+    // Verificar inmediatamente
+    checkImagesLoaded()
+    
+    // También verificar cuando cambie la categoría (nuevo icono)
+    const timer = setTimeout(checkImagesLoaded, 100)
+    
+    return () => clearTimeout(timer)
+  }, [category, titleMode, presetKey, customTitle]) // Re-ejecutar cuando cambien estos valores
 
   // Cuando cambie el idioma
   const onSwitchLang = (l: 'es' | 'en') => {
@@ -54,9 +100,9 @@ const EditorPage: React.FC = () => {
       ? (presetKey ? (t(presetKey) as string) : '')
       : customTitle
 
-  const canDownload = titleMode === 'preset' 
+  const canDownload = imagesLoaded && (titleMode === 'preset' 
     ? (presetKey && presetKey.trim().length > 0) // Para preset, solo necesita tener una opción seleccionada
-    : (customTitle && customTitle.trim().length > 0) // Para custom, necesita que el título no esté vacío
+    : (customTitle && customTitle.trim().length > 0)) // Para custom, necesita que el título no esté vacío
 
   const downloadPng = async () => {
     if (!cardRef.current) return
@@ -279,9 +325,18 @@ const EditorPage: React.FC = () => {
             className="primary"
             onClick={downloadPng}
             disabled={!canDownload}
-            title={!canDownload ? (lang === 'es' ? 'Completa el título' : 'Fill in the title') : undefined}
+            title={
+              !imagesLoaded 
+                ? (lang === 'es' ? 'Cargando imágenes...' : 'Loading images...') 
+                : !canDownload 
+                  ? (lang === 'es' ? 'Completa el título' : 'Fill in the title') 
+                  : undefined
+            }
           >
-            {lang === 'es' ? 'Descargar como PNG' : 'Download as PNG'}
+            {!imagesLoaded 
+              ? (lang === 'es' ? 'Cargando...' : 'Loading...') 
+              : (lang === 'es' ? 'Descargar como PNG' : 'Download as PNG')
+            }
           </button>
         </section>
       </main>
