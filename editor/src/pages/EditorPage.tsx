@@ -64,9 +64,17 @@ const EditorPage: React.FC = () => {
       const dataUrl = await toPng(cardRef.current, {
         cacheBust: true,
         pixelRatio: 2,
-        backgroundColor: 'transparent', // sin fondo de página
+        backgroundColor: 'transparent',
         width: cardRef.current.scrollWidth,
         height: cardRef.current.scrollHeight,
+        skipFonts: false, // Usar fuentes locales
+        filter: (node) => {
+          // Filtrar solo enlaces externos que puedan causar problemas CORS
+          if (node instanceof HTMLLinkElement && node.href.includes('fonts.googleapis.com')) {
+            return false
+          }
+          return true
+        }
       })
       const a = document.createElement('a')
       a.href = dataUrl
@@ -74,7 +82,9 @@ const EditorPage: React.FC = () => {
       a.click()
     } catch (e) {
       console.error('PNG export error:', e)
-      alert('No he podido generar la imagen. Revisa el contenido o inténtalo de nuevo.')
+      alert(lang === 'es' 
+        ? 'No he podido generar la imagen. Inténtalo de nuevo.' 
+        : 'Could not generate the image. Please try again.')
     }
   }
 
