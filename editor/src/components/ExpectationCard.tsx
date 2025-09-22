@@ -1,5 +1,7 @@
 // ExpectationCard.tsx
 import React from 'react';
+import CardoRegular from '../assets/Cardo-Regular.ttf';
+import RobotoMedium from '../assets/Roboto-Medium.ttf';
 
 type Props = {
   /** slug/categoría que usas para resolver el icono */
@@ -15,6 +17,33 @@ type Props = {
 /** Placeholder: ajusta a tu estructura real de assets */
 const defaultResolveIconPath = (category: string) =>
   `/editor/images/expectations/${category}.png`;
+
+// Declaraciones de fuentes
+const fontFaces = `
+  @font-face {
+    font-family: 'Cardo Regular';
+    src: url('${CardoRegular}') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Roboto Medium';
+    src: url('${RobotoMedium}') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+  }
+`;
+
+// Insertar las fuentes en el head del documento
+if (typeof document !== 'undefined') {
+  const styleElement = document.createElement('style');
+  styleElement.textContent = fontFaces;
+  if (!document.head.querySelector('style[data-vestal-fonts]')) {
+    styleElement.setAttribute('data-vestal-fonts', 'true');
+    document.head.appendChild(styleElement);
+  }
+}
 
 const styles = {
   wrap: {
@@ -54,11 +83,11 @@ const styles = {
 
   // 3) Título: **multilínea** (wrap) si supera el ancho
   title: {
-    fontSize: 12,
+    fontSize: 15,
     color: '#8D6E53',
-    fontFamily: 'Cardo-Regular, Cardo, serif',
-    margin: 0,
+    fontFamily: 'Cardo Regular, serif',
     marginBottom: 4,
+    margin: 0,
     lineHeight: '16px',
     // Cambios clave para multilínea:
     whiteSpace: 'normal' as const,     // permite salto de línea
@@ -68,10 +97,10 @@ const styles = {
     overflowWrap: 'break-word' as const,
   },
 
-  // 4) Contenido: asegurar “Medium”
+  // 4) Contenido: asegurar "Medium"
   content: {
     fontSize: 17,
-    fontFamily: 'Roboto, system-ui, -apple-system, Segoe UI, Arial, sans-serif',
+    fontFamily: 'Roboto Medium, system-ui, -apple-system, Segoe UI, Arial, sans-serif',
     fontWeight: 500,          // asegura el peso Medium
     color: '#14141D',
     lineHeight: '22px',

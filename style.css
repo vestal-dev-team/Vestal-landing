@@ -92,6 +92,71 @@ ul li {
   transform: translateY(-3px);
 }
 
+/* Tarjeta Social */
+.social-card {
+  background: linear-gradient(135deg, #EEE4D0 0%, #F8F5EE 100%);
+  border-radius: 16px;
+  padding: 1.5rem;
+  margin-bottom: 3rem;
+  box-shadow: 0 8px 32px rgba(76, 40, 24, 0.1);
+  border: 1px solid rgba(76, 40, 24, 0.05);
+  transition: all 0.3s ease;
+}
+
+.social-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(76, 40, 24, 0.15);
+}
+
+.social-card-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  gap: 1.5rem;
+}
+
+.social-card-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 12px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.social-card-content {
+  flex: 1;
+}
+
+.social-card-content h3 {
+  font-family: 'Cardo', serif;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #4C2818;
+}
+
+.social-card-content p {
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+  color: #6B4423;
+  line-height: 1.4;
+}
+
+.social-icons {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.social-icons img {
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+}
+
+.social-card:hover .social-icons img {
+  opacity: 1;
+}
+
 /* Footer */
 footer {
   text-align: center;
