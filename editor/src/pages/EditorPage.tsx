@@ -60,7 +60,48 @@ const EditorPage: React.FC = () => {
 
   const downloadPng = async () => {
     if (!cardRef.current) return
+    
+    // Función para esperar a que todas las imágenes estén cargadas
+    const waitForImages = (element: HTMLElement): Promise<void> => {
+      return new Promise((resolve) => {
+        const images = element.querySelectorAll('img')
+        if (images.length === 0) {
+          resolve()
+          return
+        }
+        
+        let loadedCount = 0
+        const checkAllLoaded = () => {
+          loadedCount++
+          if (loadedCount === images.length) {
+            resolve()
+          }
+        }
+        
+        images.forEach((img) => {
+          if (img.complete && img.naturalHeight !== 0) {
+            checkAllLoaded()
+          } else {
+            img.onload = checkAllLoaded
+            img.onerror = checkAllLoaded
+            // Forzar recarga si la imagen no está disponible
+            if (!img.src || img.naturalHeight === 0) {
+              const originalSrc = img.src
+              img.src = ''
+              img.src = originalSrc
+            }
+          }
+        })
+      })
+    }
+
     try {
+      // Esperar a que todas las imágenes estén cargadas
+      await waitForImages(cardRef.current)
+      
+      // Pequeño delay adicional para Safari
+      await new Promise(resolve => setTimeout(resolve, 100))
+      
       // Configuración optimizada para compatibilidad cross-browser
       const dataUrl = await toPng(cardRef.current, {
         cacheBust: true,
@@ -91,6 +132,10 @@ const EditorPage: React.FC = () => {
       // Fallback específico para Safari/Firefox
       try {
         console.log('Intentando fallback para Safari/Firefox...')
+        
+        // Esperar un poco más en el fallback
+        await new Promise(resolve => setTimeout(resolve, 200))
+        
         const fallbackDataUrl = await toPng(cardRef.current, {
           cacheBust: false,
           pixelRatio: 1,
