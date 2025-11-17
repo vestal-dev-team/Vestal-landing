@@ -4,108 +4,180 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Política de Privacidad – Vestal</title>
-  <!-- La hoja de estilo style.css se asume externa. -->
-  <link rel="stylesheet" href="../style.css" />
+  
+  <!-- Carga de fuentes Cardo e Inter -->
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 
   <style>
-    /* Ajustes visuales mínimos para que la política se vea limpia */
+    /* --- Fuentes y Estilos Globales de Vestal --- */
+    @import url('https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&display=swap');
+    @import url('https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
-      color: #4C2818;
       font-family: 'Inter', sans-serif;
-      background-color: #fcf8f6;
+      background-color: #F8F5EE; /* Beige claro */
+      color: #4C2818; /* Marrón oscuro */
+      line-height: 1.7;
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem 1rem;
     }
+
+    /* Header */
     .site-header {
-        background: #f7f0ec;
-        padding: 3rem 1.5rem 1.5rem;
-        text-align: center;
-        border-bottom: 2px solid #d6c4b8;
-        border-radius: 0 0 1rem 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 3rem;
+      background: none;
+      padding: 0;
+      border: none;
     }
+
+    .site-header a[href="index.html"] {
+        /* Estilo para "← Volver al Inicio" */
+        font-size: 1rem;
+        color: #4C2818;
+        text-decoration: none;
+        margin-bottom: 1.5rem;
+        align-self: flex-start;
+        padding-left: 0;
+    }
+
     .logo {
-        max-width: 80px;
-        margin: 1rem auto;
-        display: block;
+      width: 200px;
+      margin-bottom: 1rem;
     }
+
+    /* Encabezados */
+    h1 {
+      font-family: 'Cardo', serif;
+      font-size: 5rem;
+      text-align: center;
+      margin-bottom: 1.5rem;
+      color: #4C2818;
+      font-weight: 400; /* Cardo regular for H1 */
+    }
+
+    h2 {
+      font-family: 'Cardo', serif;
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      margin-top: 2.5rem;
+      color: #4C2818;
+      font-weight: 400; /* Cardo regular for H2 */
+    }
+
+    h3 {
+      font-family: 'Cardo', serif;
+      font-size: 1.5rem;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+      color: #4C2818;
+      font-weight: 700;
+    }
+
+    /* Main Content and Text */
     main {
-      max-width: 800px;
+      max-width: 900px;
       margin: 2rem auto;
-      padding: 0 1.5rem;
+      padding: 0 1rem;
     }
+
     section {
       padding: 1rem 0;
       border-bottom: 1px dashed #d6c4b8;
+      margin-bottom: 3rem;
     }
     section:last-of-type {
       border-bottom: none;
     }
+
+    section p {
+      font-size: 1.25rem;
+      margin-top: 0.75rem;
+    }
+
+    ul {
+      list-style-type: disc;
+      margin-left: 1.5rem;
+      margin-bottom: 1rem;
+      padding-left: 0;
+    }
+
+    ul li {
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+    }
+
+    /* Tables - Adaptado al esquema de Vestal */
     table {
       width: 100%;
       border-collapse: collapse;
-      margin: 1rem 0;
+      margin: 1.5rem 0;
       background: #fff;
-      border: 1px solid #d6c4b8;
-      border-radius: 0.5rem;
+      border: 1px solid #4C2818; /* Borde oscuro */
+      border-radius: 8px;
       overflow: hidden;
+      box-shadow: 0 4px 8px rgba(76, 40, 24, 0.05);
     }
     th, td {
       border: 1px solid #d6c4b8;
-      padding: 0.75rem;
+      padding: 1rem;
       vertical-align: top;
-      font-size: 0.9rem;
+      font-size: 1.1rem;
     }
     th {
-      background: #e9e0da;
+      background: #EEE4D0; /* Beige intermedio */
       font-weight: 700;
       text-align: left;
+      color: #4C2818;
     }
-    h1 {
-      font-size: 2.25rem;
-      font-weight: 800;
-    }
-    h2 {
-      font-size: 1.75rem;
-      margin-top: 2.5rem;
-      color: #794A33;
-      font-weight: 700;
-    }
-    h3 {
-      font-size: 1.25rem;
-      margin-top: 1.5rem;
-      color: #794A33;
-      font-weight: 600;
-    }
-    ul {
-      list-style-type: disc;
-      padding-left: 1.5rem;
-      margin: 0.5rem 0;
-    }
+
+    /* Links */
     a {
-      color: #A36B4D;
+      color: #A36B4D; /* Tono de marrón de énfasis */
       text-decoration: underline;
       transition: color 0.3s;
     }
     a:hover {
-      color: #794A33;
+      color: #4C2818;
     }
+
+    /* Footer */
     footer {
-        text-align: center;
-        padding: 2rem 0;
-        font-size: 0.8rem;
-        color: #794A33;
+      text-align: center;
+      font-size: 1rem;
+      margin-top: 4rem;
+      color: #4C2818;
+    }
+
+    /* AOS - (Dejado como está) */
+    [data-aos] {
+      opacity: 0;
+      transition-property: opacity, transform;
+    }
+    [data-aos].aos-animate {
+      opacity: 1;
     }
   </style>
 </head>
 
 <body>
   <header class="site-header" data-aos="fade-down">
-    <a href="index.html" style="text-decoration:none; color:#4C2818; font-size:1rem; margin-bottom:1.5rem;">
+    <a href="index.html" style="text-decoration:none; color:#4C2818; margin-bottom:1.5rem;">
       ← Volver al Inicio
     </a>
     <!-- Usando un placeholder de imagen simple para el logo, ya que el archivo '../assets/happy.png' no existe en este contexto -->
-    <img src="https://placehold.co/80x80/f7f0ec/4C2818?text=V" alt="Logo Vestal" class="logo" />
+    <img src="https://placehold.co/200x200/F8F5EE/4C2818?text=VESTAL" alt="Logo Vestal" class="logo" />
     <h1 data-aos="fade-down" data-aos-delay="100">Política de Privacidad</h1>
-    <p style="color:#4C2818; margin-top:0.5rem;">Última actualización: 17/11/2025</p>
+    <p style="color:#4C2818; margin-top:0.5rem; font-size: 1.25rem;">Última actualización: 17/11/2025</p>
   </header>
 
   <main>
@@ -213,7 +285,7 @@
           </tr>
 
           <tr>
-            <td><strong>Contenido Generado por Ti*</strong></td>
+            <td><strong>Contenido Generado por Ti</strong></td>
             <td>
               <ul>
                 <li>Fotos de vivienda</li>
@@ -519,8 +591,7 @@
       <h2>12. Seguridad</h2>
       <p>Aplicamos medidas técnicas y organizativas adecuadas, incluyendo:</p>
       <ul>
-        <li>Cifrado en tránsito (TLS)</li>
-        <li>Cifrado en reposo (cuando se aplica)</li>
+        <li>Cifrado</li>
         <li>Control de accesos internos</li>
         <li>Monitorización</li>
         <li>Aislamiento de entornos</li>
