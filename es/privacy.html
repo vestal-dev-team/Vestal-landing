@@ -4,32 +4,95 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Política de Privacidad – Vestal</title>
+  <!-- La hoja de estilo style.css se asume externa. -->
   <link rel="stylesheet" href="../style.css" />
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 
   <style>
     /* Ajustes visuales mínimos para que la política se vea limpia */
+    body {
+      color: #4C2818;
+      font-family: 'Inter', sans-serif;
+      background-color: #fcf8f6;
+    }
+    .site-header {
+        background: #f7f0ec;
+        padding: 3rem 1.5rem 1.5rem;
+        text-align: center;
+        border-bottom: 2px solid #d6c4b8;
+        border-radius: 0 0 1rem 1rem;
+    }
+    .logo {
+        max-width: 80px;
+        margin: 1rem auto;
+        display: block;
+    }
+    main {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 0 1.5rem;
+    }
+    section {
+      padding: 1rem 0;
+      border-bottom: 1px dashed #d6c4b8;
+    }
+    section:last-of-type {
+      border-bottom: none;
+    }
     table {
       width: 100%;
       border-collapse: collapse;
       margin: 1rem 0;
       background: #fff;
+      border: 1px solid #d6c4b8;
+      border-radius: 0.5rem;
+      overflow: hidden;
     }
     th, td {
       border: 1px solid #d6c4b8;
       padding: 0.75rem;
       vertical-align: top;
+      font-size: 0.9rem;
     }
     th {
-      background: #f7f0ec;
-      font-weight: bold;
+      background: #e9e0da;
+      font-weight: 700;
       text-align: left;
     }
+    h1 {
+      font-size: 2.25rem;
+      font-weight: 800;
+    }
     h2 {
+      font-size: 1.75rem;
       margin-top: 2.5rem;
+      color: #794A33;
+      font-weight: 700;
     }
     h3 {
+      font-size: 1.25rem;
       margin-top: 1.5rem;
+      color: #794A33;
+      font-weight: 600;
+    }
+    ul {
+      list-style-type: disc;
+      padding-left: 1.5rem;
+      margin: 0.5rem 0;
+    }
+    a {
+      color: #A36B4D;
+      text-decoration: underline;
+      transition: color 0.3s;
+    }
+    a:hover {
+      color: #794A33;
+    }
+    footer {
+        text-align: center;
+        padding: 2rem 0;
+        font-size: 0.8rem;
+        color: #794A33;
     }
   </style>
 </head>
@@ -39,7 +102,8 @@
     <a href="index.html" style="text-decoration:none; color:#4C2818; font-size:1rem; margin-bottom:1.5rem;">
       ← Volver al Inicio
     </a>
-    <img src="../assets/happy.png" alt="Logo Vestal" class="logo" />
+    <!-- Usando un placeholder de imagen simple para el logo, ya que el archivo '../assets/happy.png' no existe en este contexto -->
+    <img src="https://placehold.co/80x80/f7f0ec/4C2818?text=V" alt="Logo Vestal" class="logo" />
     <h1 data-aos="fade-down" data-aos-delay="100">Política de Privacidad</h1>
     <p style="color:#4C2818; margin-top:0.5rem;">Última actualización: 17/11/2025</p>
   </header>
@@ -65,6 +129,7 @@
     <!-- 1 -->
     <section data-aos="fade-up" data-aos-delay="250">
       <h2>1. Responsable del tratamiento</h2>
+      <p>El responsable del tratamiento de tus datos personales es:</p>
       <p><strong>Vestal</strong></p>
       <p><strong>Correo:</strong> <a href="mailto:vestal.theapp@gmail.com">vestal.theapp@gmail.com</a></p>
       <p>
@@ -75,17 +140,16 @@
     <!-- 2 -->
     <section data-aos="fade-up" data-aos-delay="300">
       <h2>2. Ámbito de aplicación</h2>
-      <p>Esta Política se aplica cuando:</p>
+      <p>Esta Política se aplica a todos los datos personales que tratamos cuando:</p>
       <ul>
-        <li>Usas nuestra App móvil (iOS o Android).</li>
-        <li>Interactúas con contenidos enlazados desde la App referentes a esta Política.</li>
+        <li>Usas nuestra App móvil (en iOS o Android).</li>
+        <li>Interactúas con páginas o recursos enlazados desde la App relacionados con esta Política.</li>
       </ul>
       <p>
-        “Usuario” significa cualquier persona que acceda o use la App.
+        En esta Política, “usuario” se refiere a cualquier persona que acceda o utilice la App.
       </p>
       <p>
-        Para poder usar el Servicio es necesario que aceptes esta Política. Si decides no aceptar
-        algún tratamiento esencial (como la creación o publicación del perfil), no podremos prestarte la App.
+        Para poder utilizar la App es necesario que aceptes esta Política y nos facilites aquellos datos imprescindibles para prestarte el Servicio. Si decides no aceptar algún tratamiento esencial (como la creación de tu perfil o la publicación del mismo), no podremos prestarte el Servicio.
       </p>
     </section>
 
@@ -94,7 +158,7 @@
       <h2>3. Qué datos recogemos sobre ti</h2>
       <p>
         Organizamos los datos en categorías para facilitar su comprensión. Toda la información
-        que publiques es bajo tu responsabilidad; puede ser visible para otros usuarios.
+        que publiques es bajo tu propia responsabilidad. Dada la naturaleza del Servicio, te instamos a ser prudente: cualquier contenido que publiques puede llegar a ser visible para otros usuarios.
       </p>
 
       <!-- TABLA PRINCIPAL -->
@@ -128,7 +192,7 @@
                 <li>Profesión</li>
                 <li>Idioma</li>
                 <li>Descripción personal</li>
-                <li>Hábitos y estilo de vida</li>
+                <li>Hábitos de convivencia, estilo de vida, horarios</li>
                 <li>Preferencias personales</li>
               </ul>
             </td>
@@ -143,7 +207,7 @@
                 <li>Tipo de habitación</li>
                 <li>Reglas de convivencia</li>
                 <li>Preferencias sobre compañeros</li>
-                <li>Votos en solicitudes</li>
+                <li>Votos positivos/negativos en solicitudes</li>
               </ul>
             </td>
           </tr>
@@ -153,9 +217,9 @@
             <td>
               <ul>
                 <li>Fotos de vivienda</li>
-                <li>Descripciones</li>
+                <li>Descripciones y detalles de tu casa</li>
                 <li>Mensajes del chat</li>
-                <li>Textos libres o solicitudes</li>
+                <li>Información incluida en solicitudes o textos libres</li>
               </ul>
             </td>
           </tr>
@@ -165,10 +229,10 @@
             <td>
               <ul>
                 <li>Solicitudes enviadas/recibidas</li>
-                <li>Estado de solicitudes</li>
+                <li>Estado (aceptada / rechazada / pendiente)</li>
                 <li>Valor de compatibilidad</li>
-                <li>Visitas y agenda</li>
-                <li>Compañeros asociados</li>
+                <li>Registros de visitas y agenda</li>
+                <li>Compañeros asociados a una casa</li>
               </ul>
             </td>
           </tr>
@@ -177,11 +241,11 @@
             <td><strong>Datos Técnicos y del Dispositivo</strong></td>
             <td>
               <ul>
-                <li>IP</li>
-                <li>ID de dispositivo</li>
+                <li>Dirección IP</li>
+                <li>ID del dispositivo</li>
                 <li>Firebase Installation ID</li>
-                <li>Sistema operativo</li>
-                <li>Idioma</li>
+                <li>Sistema operativo y versión</li>
+                <li>Idioma del dispositivo</li>
                 <li>Versión de la App</li>
                 <li>Logs de errores</li>
               </ul>
@@ -189,24 +253,24 @@
           </tr>
 
           <tr>
-            <td><strong>Datos de Uso</strong></td>
+            <td><strong>Datos de Uso de la App</strong></td>
             <td>
               <ul>
                 <li>Pantallas visitadas</li>
                 <li>Acciones realizadas</li>
-                <li>Sesiones</li>
-                <li>Interacciones con notificaciones</li>
+                <li>Fecha y hora de inicio de sesión</li>
+                <li>Interacción con notificaciones</li>
               </ul>
             </td>
           </tr>
 
           <tr>
-            <td><strong>Comunicación</strong></td>
+            <td><strong>Datos de Comunicaciones</strong></td>
             <td>
               <ul>
-                <li>Mensajes a soporte</li>
-                <li>Adjuntos</li>
-                <li>Capturas enviadas</li>
+                <li>Mensajes enviados al soporte</li>
+                <li>Adjuntos enviados</li>
+                <li>Capturas de pantalla de incidencias</li>
               </ul>
             </td>
           </tr>
@@ -215,8 +279,8 @@
             <td><strong>Geolocalización Aproximada</strong></td>
             <td>
               <ul>
-                <li>Ciudad / País</li>
-                <li>Información inferida por IP</li>
+                <li>Ciudad/país</li>
+                <li>Información inferida por IP o aportada por ti</li>
               </ul>
             </td>
           </tr>
@@ -224,7 +288,7 @@
         </tbody>
       </table>
 
-      <p><em>* No modificables: fecha de nacimiento y número de teléfono.</em></p>
+      <p><em>* Puedes actualizar estas informaciones en cualquier momento desde tu cuenta, salvo la fecha de nacimiento y el número de teléfono, que no son modificables.</em></p>
     </section>
 
     <!-- 4 -->
@@ -234,7 +298,7 @@
       <table>
         <thead>
           <tr>
-            <th>Finalidad</th>
+            <th>Finalidad del tratamiento</th>
             <th>Base legal</th>
             <th>Categorías usadas</th>
           </tr>
@@ -242,89 +306,100 @@
         <tbody>
 
           <tr>
-            <td>Prestar el Servicio (cuenta, edad, perfil, uso básico)</td>
+            <td>Prestar el Servicio: crear cuenta, verificar edad, permitir creación de perfil, uso básico</td>
             <td>Ejecución de contrato</td>
             <td>Cuenta, Perfil, Preferencias, Actividad</td>
           </tr>
 
           <tr>
-            <td>Mostrar identidad de género (dato sensible)</td>
+            <td>Mostrar datos opcionales de categoría especial (identidad de género)</td>
             <td>Consentimiento explícito</td>
             <td>Perfil</td>
           </tr>
 
           <tr>
-            <td>Matching, compatibilidad, solicitudes, chat</td>
+            <td>Matching y solicitudes: mostrar perfiles, calcular compatibilidad, habilitar chat</td>
             <td>Ejecución de contrato</td>
             <td>Perfil, Preferencias, Actividad, Contenido</td>
           </tr>
 
           <tr>
-            <td>Mejora técnica, corrección de errores</td>
-            <td>Interés legítimo</td>
+            <td>Mejorar la App, corregir errores, optimizar rendimiento</td>
+            <td>Interés legítimo*</td>
             <td>Técnicos, Uso, Actividad</td>
           </tr>
 
           <tr>
-            <td>Seguridad, fraude, abuso</td>
-            <td>Interés legítimo</td>
+            <td>Proteger la plataforma: seguridad, abuso, fraude</td>
+            <td>Interés legítimo*</td>
             <td>Técnicos, Uso, Cuenta</td>
           </tr>
 
           <tr>
-            <td>Analítica interna</td>
-            <td>Interés legítimo</td>
+            <td>Analítica básica de funcionalidad</td>
+            <td>Interés legítimo*</td>
             <td>Técnicos, Uso, Dispositivo</td>
           </tr>
 
           <tr>
-            <td>Notificaciones operativas</td>
+            <td>Comunicaciones del servicio (notificaciones operativas)</td>
             <td>Ejecución de contrato</td>
             <td>Cuenta, Actividad</td>
           </tr>
 
           <tr>
-            <td>Responder consultas</td>
-            <td>Interés legítimo</td>
+            <td>Responder a tus consultas</td>
+            <td>Interés legítimo*</td>
             <td>Comunicaciones</td>
           </tr>
 
           <tr>
-            <td>Cumplimiento legal</td>
+            <td>Cumplir obligaciones legales</td>
             <td>Obligación legal</td>
-            <td>Datos necesarios</td>
+            <td>Datos necesarios según la normativa</td>
           </tr>
 
         </tbody>
       </table>
 
       <h3>Interés legítimo</h3>
+      <p>Nuestros intereses legítimos incluyen:</p>
       <ul>
-        <li>Seguridad y protección del Servicio</li>
-        <li>Mejora continua de la App</li>
-        <li>Métricas internas para decisiones técnicas</li>
+        <li>garantizar la seguridad, prevenir fraudes y abusos</li>
+        <li>mejorar la funcionalidad del servicio</li>
+        <li>obtener métricas internas para tomar decisiones basadas en rendimiento real</li>
       </ul>
+      <p>Estos intereses no prevalecen sobre tus derechos. Puedes oponerte en cualquier momento (Art. 21 RGPD).</p>
 
-      <h3>Datos sensibles</h3>
-      <p>La identidad de género requiere consentimiento explícito. Los datos sensibles publicados por ti se consideran divulgados voluntariamente.</p>
+      <h3>Datos de categoría especial</h3>
+      <p>Para la identidad de género solicitamos consentimiento explícito (Art. 9.2.a RGPD). Puedes retirarlo eliminando ese dato o contactándonos.</p>
+      <p>Los datos sensibles que publiques voluntariamente en campos de texto o fotos se tratarán bajo la base legal de que tú los has hecho manifiestamente públicos (Art. 9.2.e RGPD).</p>
 
-      <h3>Matching</h3>
-      <p>Hay elaboración de perfiles pero <strong>no</strong> hay decisiones automatizadas con efectos legales.</p>
+      <h3>Sobre el matching</h3>
+      <p>Se utilizan tus datos para calcular compatibilidad. Esto constituye elaboración de perfiles, pero: </p>
+      <ul>
+        <li>no se toman decisiones automáticas con efectos legales o significativos</li>
+        <li>la decisión final siempre es del usuario</li>
+      </ul>
     </section>
 
     <!-- 5 -->
     <section data-aos="fade-up" data-aos-delay="450">
       <h2>5. Con quién compartimos tus datos</h2>
+      <p>Nunca vendemos tus datos personales. Solo compartimos lo necesario para operar la App.</p>
 
       <h3>5.1. Otros usuarios</h3>
+      <p>Tus datos se comparten con otros usuarios cuando es necesario para el funcionamiento:</p>
       <ul>
-        <li>Perfil público</li>
-        <li>Datos de tu casa</li>
-        <li>Solicitudes</li>
-        <li>Chat (entre implicados)</li>
+        <li>Tu perfil público</li>
+        <li>Información de tu casa</li>
+        <li>Información de tus solicitudes</li>
+        <li>Mensajes del chat (solo entre usuarios implicados)</li>
       </ul>
+      <p>Recomendación: no compartas datos privados o sensibles en tu perfil o en el chat.</p>
 
-      <h3>5.2. Proveedores (encargados)</h3>
+      <h3>5.2. Proveedores de servicios (encargados del tratamiento)</h3>
+      <p>Todos ellos actúan bajo contrato conforme al Art. 28 RGPD.</p>
 
       <table>
         <thead>
@@ -336,84 +411,93 @@
         </thead>
         <tbody>
           <tr>
-            <td>Infraestructura</td>
+            <td>Infraestructura y base de datos</td>
             <td>Firebase Cloud Functions</td>
-            <td>Backend + base de datos</td>
+            <td>Alojamiento de backend y BD</td>
           </tr>
           <tr>
-            <td>Auth / Notificaciones / Firestore</td>
+            <td>Autenticación, Notificaciones, Firestore</td>
             <td>Google Firebase</td>
-            <td>Autenticación, DB, Push</td>
+            <td>Auth, DB, push notifications</td>
           </tr>
           <tr>
             <td>Analítica</td>
             <td>Google Analytics for Firebase</td>
-            <td>Métricas de uso</td>
+            <td>Métricas y eventos de uso</td>
           </tr>
           <tr>
-            <td>SMS</td>
-            <td>Firebase Auth</td>
-            <td>Verificación telefónica</td>
+            <td>Verificación por SMS</td>
+            <td>Firebase Authentication</td>
+            <td>Envío del código de verificación</td>
           </tr>
         </tbody>
       </table>
+      <p>Los proveedores no pueden usar tus datos para fines propios.</p>
 
-      <h3>5.3. Moderación</h3>
-      <p>Solo cuando sea estrictamente necesario: fraude, abuso o requerimientos legales.</p>
+      <h3>5.3. Moderación, seguridad y abuso</h3>
+      <p>Podemos revisar perfiles, fotos o mensajes únicamente cuando sea necesario para: investigar fraude o abuso, proteger a otros usuarios o cumplir obligaciones legales. El acceso está estrictamente limitado.</p>
 
-      <h3>5.4. Autoridades</h3>
-      <p>Cuando la ley lo exija.</p>
+      <h3>5.4. Autoridades legales</h3>
+      <p>Compartiremos datos cuando lo exija la ley, debamos responder a un requerimiento judicial o debamos investigar fraude o abuso.</p>
 
       <h3>5.5. Operaciones corporativas</h3>
-      <p>En caso de venta o fusión, se mantienen las garantías legales.</p>
+      <p>En caso de fusión, venta o reestructuración, tus datos podrán transferirse a la nueva entidad bajo las mismas garantías.</p>
     </section>
 
     <!-- 6 -->
     <section data-aos="fade-up" data-aos-delay="500">
       <h2>6. Transferencias internacionales</h2>
       <p>
-        Usamos SCCs (Cláusulas Contractuales Estándar) y mecanismos adicionales, especialmente con Firebase.
+        Nuestros proveedores pueden estar dentro o fuera de la UE. Aseguramos tu protección mediante:
       </p>
+      <ul>
+        <li>Destinos con decisión de adecuación, o</li>
+        <li>Cláusulas Contractuales Estándar de la Comisión Europea (SCCs)</li>
+      </ul>
+      <p>El caso de Google/Firebase se gestiona mediante SCCs y medidas adicionales.</p>
     </section>
 
     <!-- 7 -->
     <section data-aos="fade-up" data-aos-delay="550">
       <h2>7. Tecnologías de análisis y seguimiento</h2>
+      <p>La App no utiliza cookies, pero sí identificadores técnicos como:</p>
       <ul>
         <li>Firebase Installation ID</li>
-        <li>ID del dispositivo</li>
-        <li>Analítica interna de Firebase</li>
+        <li>ID de dispositivo</li>
+        <li>Eventos de Firebase Analytics</li>
       </ul>
-      <p>Solo para estabilidad, mejoras y corrección de errores. Nunca publicidad.</p>
+      <p>Se usan exclusivamente para: mejorar estabilidad, comprender usos de la App y corregir errores. Nunca para publicidad ni rastreo comercial. Cuando sea legalmente necesario, pediremos tu consentimiento antes de activar analítica no esencial.</p>
     </section>
 
     <!-- 8 -->
     <section data-aos="fade-up" data-aos-delay="600">
-      <h2>8. Encuestas y colaboraciones</h2>
-      <p>Opcionales y siempre voluntarias.</p>
+      <h2>8. Encuestas, testimonios y colaboraciones</h2>
+      <p>Ocasionalmente te invitaremos a participar en encuestas, testimonios o aportaciones de marketing. Tu participación es voluntaria. Si no deseas recibir invitaciones, puedes comunicarlo al responsable del tratamiento.</p>
     </section>
 
     <!-- 9 -->
     <section data-aos="fade-up" data-aos-delay="650">
       <h2>9. Conservación de datos</h2>
       <ul>
-        <li>Mientras uses la App.</li>
-        <li>30 días bloqueados tras borrar la cuenta.</li>
-        <li>Antifraude: hasta 2 años.</li>
-        <li>Obligaciones legales: hasta 5 años.</li>
+        <li>Datos de cuenta y perfil: mientras tu cuenta esté activa.</li>
+        <li>Tras borrar tu cuenta: bloqueados durante 30 días y luego eliminados o anonimizados.</li>
+        <li>Información para prevención de fraude o baneos: hasta 2 años.</li>
+        <li>Conservación por motivos legales: hasta 5 años.</li>
       </ul>
-      <p>Cuenta eliminada si no se usa durante 12 meses.</p>
+      <p>Los chats, fotos y publicaciones se eliminan junto con la cuenta, salvo que sea necesario conservarlos temporalmente por motivos legales.</p>
+      <p>Si no accedes a tu cuenta durante un periodo continuado de 12 meses, podremos eliminarla por inactividad.</p>
     </section>
 
     <!-- 10 -->
     <section data-aos="fade-up" data-aos-delay="700">
       <h2>10. Usuarios menores de edad</h2>
-      <p>Solo +18. Eliminación inmediata si se detecta un menor.</p>
+      <p>El Servicio está limitado a personas mayores de 18 años. Verificamos la edad durante el registro. Si detectamos una cuenta de un menor, se eliminará inmediatamente.</p>
     </section>
 
     <!-- 11 -->
     <section data-aos="fade-up" data-aos-delay="750">
       <h2>11. Tus derechos</h2>
+      <p>Puedes ejercer los siguientes derechos según el RGPD:</p>
       <ul>
         <li>Acceso</li>
         <li>Rectificación</li>
@@ -423,29 +507,32 @@
         <li>Portabilidad</li>
         <li>Retirada del consentimiento</li>
       </ul>
+      <p>Te responderemos en un plazo máximo de 1 mes.</p>
       <p>
-        📩 <a href="mailto:vestal.theapp@gmail.com">vestal.theapp@gmail.com</a><br/>
-        AEPD (España): <a href="https://www.aepd.es" target="_blank">www.aepd.es</a>
+        📩 Para ejercerlos, escríbenos a: <a href="mailto:vestal.theapp@gmail.com">vestal.theapp@gmail.com</a><br/>
+        También puedes reclamar ante tu autoridad local de protección de datos. En España: AEPD (<a href="https://www.aepd.es" target="_blank">www.aepd.es</a>).
       </p>
     </section>
 
     <!-- 12 -->
     <section data-aos="fade-up" data-aos-delay="800">
       <h2>12. Seguridad</h2>
+      <p>Aplicamos medidas técnicas y organizativas adecuadas, incluyendo:</p>
       <ul>
-        <li>TLS</li>
-        <li>Cifrado en reposo</li>
-        <li>Control de accesos</li>
+        <li>Cifrado en tránsito (TLS)</li>
+        <li>Cifrado en reposo (cuando se aplica)</li>
+        <li>Control de accesos internos</li>
         <li>Monitorización</li>
         <li>Aislamiento de entornos</li>
-        <li>Backups seguros</li>
+        <li>Copias de seguridad seguras</li>
       </ul>
+      <p>Ningún sistema es infalible, pero actuaremos rápidamente ante cualquier incidente.</p>
     </section>
 
     <!-- 13 -->
     <section data-aos="fade-up" data-aos-delay="850">
       <h2>13. Cambios en esta Política</h2>
-      <p>Te avisaremos desde la App cuando haya cambios importantes.</p>
+      <p>Podemos actualizar esta Política en cualquier momento. Cuando haya cambios importantes, te lo notificaremos en la App.</p>
     </section>
 
   </main>
@@ -455,6 +542,7 @@
   </footer>
 
   <script>
+    // Inicializa la librería AOS para animaciones al hacer scroll.
     AOS.init({ once: true, duration: 600, easing: 'ease-out-cubic' });
   </script>
 </body>
