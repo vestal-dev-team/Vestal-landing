@@ -4,95 +4,820 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Política de Privacidad – Vestal</title>
-  <link rel="stylesheet" href="../style.css" />
+  
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+  <style>
+    /* --- Fuentes y Estilos Globales de Vestal (Idéntico a T&C) --- */
+    @import url('https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;600&display=swap');
+    @import url('https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #F8F5EE; /* Beige claro */
+      color: #4C2818; /* Marrón oscuro */
+      line-height: 1.7;
+      max-width: 900px;
+      margin: auto;
+      padding: 2rem 1rem;
+    }
+
+    /* Header */
+    .site-header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 3rem;
+      background: none;
+      padding: 0;
+      border: none;
+    }
+
+    .site-header a[href="index.html"] {
+        /* Estilo para "← Volver al Inicio" */
+        font-size: 1rem;
+        color: #4C2818;
+        text-decoration: none;
+        margin-bottom: 1.5rem;
+        align-self: flex-start;
+        padding-left: 0;
+    }
+
+    .logo {
+      width: 200px;
+      margin-bottom: 1rem;
+    }
+
+    /* Encabezados */
+    h1 {
+      font-family: 'Cardo', serif;
+      font-size: 3.5rem;
+      text-align: center;
+      margin-bottom: 1.5rem;
+      color: #4C2818;
+      font-weight: 400;
+    }
+
+    h2 {
+      font-family: 'Cardo', serif;
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+      margin-top: 2.5rem;
+      color: #4C2818;
+      font-weight: 400;
+    }
+
+    h3 {
+      font-family: 'Cardo', serif;
+      font-size: 1.5rem;
+      margin-top: 1.5rem;
+      margin-bottom: 0.5rem;
+      color: #4C2818;
+      font-weight: 700;
+    }
+
+    /* Main Content and Text */
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    section {
+      padding: 1rem 0;
+      border-bottom: 1px dashed #d6c4b8;
+      margin-bottom: 3rem;
+    }
+    section:last-of-type {
+      border-bottom: none;
+    }
+
+    section p {
+      font-size: 1.1rem;
+      margin-top: 0.75rem;
+    }
+
+    ul {
+      list-style-type: disc;
+      margin-left: 1.5rem;
+      margin-bottom: 1rem;
+      padding-left: 0;
+    }
+
+    ul li {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    /* Tables */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1.5rem 0;
+      background: #fff;
+      border: 1px solid #4C2818;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(76, 40, 24, 0.05);
+    }
+    th, td {
+      border: 1px solid #d6c4b8;
+      padding: 1rem;
+      vertical-align: top;
+      font-size: 1.05rem;
+    }
+    th {
+      background: #EEE4D0;
+      font-weight: 700;
+      text-align: left;
+      color: #4C2818;
+    }
+
+    /* Helper específico para listas dentro de tablas */
+    table ul {
+      margin-left: 1rem;
+      margin-bottom: 0;
+    }
+    table ul li {
+      font-size: 1.05rem;
+      margin-bottom: 0.25rem;
+    }
+
+    /* Links */
+    a {
+      color: #A36B4D;
+      text-decoration: underline;
+      transition: color 0.3s;
+    }
+    a:hover {
+      color: #4C2818;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      font-size: 1rem;
+      margin-top: 4rem;
+      color: #4C2818;
+    }
+
+    /* AOS */
+    [data-aos] {
+      opacity: 0;
+      transition-property: opacity, transform;
+    }
+    [data-aos].aos-animate {
+      opacity: 1;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 1.5rem 1rem;
+        line-height: 1.6;
+      }
+
+      h1 {
+        font-size: 2.4rem;
+      }
+
+      h2 {
+        font-size: 1.6rem;
+        margin-top: 2rem;
+      }
+
+      h3 {
+        font-size: 1.3rem;
+      }
+
+      .logo {
+        width: 140px;
+      }
+
+      section {
+        margin-bottom: 2rem;
+      }
+
+      table, th, td {
+        font-size: 0.95rem;
+        padding: 0.75rem;
+      }
+    }
+  </style>
 </head>
+
 <body>
   <header class="site-header" data-aos="fade-down">
-    <a href="index.html" style="text-decoration:none; color:#4C2818; font-size:1rem; margin-bottom:1.5rem;">
+    <a href="index.html" style="text-decoration:none; color:#4C2818; margin-bottom:1.5rem;">
       ← Volver al Inicio
     </a>
-    <img src="../assets/happy.png" alt="Logo Vestal" class="logo" />
+    <img src="https://placehold.co/200x200/F8F5EE/4C2818?text=VESTAL" alt="Logo Vestal" class="logo" />
     <h1 data-aos="fade-down" data-aos-delay="100">Política de Privacidad</h1>
+    <p style="color:#4C2818; margin-top:0.5rem; font-size: 1.1rem;">
+      Última actualización: 04/12/2025
+    </p>
   </header>
 
   <main>
+
     <section data-aos="fade-up" data-aos-delay="200">
-      <h2>Introducción</h2>
       <p>
-        En Vestal estamos comprometidos con la protección de tu privacidad. Esta Política de Privacidad
-        explica cómo recopilamos, usamos, divulgamos y protegemos tu información cuando usas nuestro
-        sitio web y aplicación móvil.
+        En esta Política de Privacidad te explicamos qué datos recogemos cuando utilizas «Vestal»
+        (en adelante, la “App” o el “Servicio”), cómo los usamos, con quién los compartimos y qué
+        derechos tienes sobre ellos.
+      </p>
+      <p>
+        Al utilizar la App, aceptas las prácticas descritas en esta Política. Te recomendamos leerla detenidamente.
+      </p>
+      <p>
+        El Servicio está destinado exclusivamente a personas mayores de 18 años. Si eres menor de dicha edad,
+        no debes utilizar la App.
+      </p>
+    </section>
+
+    <section data-aos="fade-up" data-aos-delay="250">
+      <h2>1. Responsable del tratamiento</h2>
+      <p>El responsable del tratamiento de tus datos personales es:</p>
+      <table>
+        <tbody>
+          <tr>
+            <th>Razón Social / Nombre completo</th>
+            <td>Vestal</td>
+          </tr>
+          <tr>
+            <th>Correo de contacto general y soporte</th>
+            <td><a href="mailto:vestal.theapp@gmail.com">vestal.theapp@gmail.com</a></td>
+          </tr>
+        </tbody>
+      </table>
+      <p>
+        Si deseas contactar con la persona responsable de privacidad, puedes escribir al correo indicado.
       </p>
     </section>
 
     <section data-aos="fade-up" data-aos-delay="300">
-      <h2>Datos que Recopilamos</h2>
+      <h2>2. Ámbito de aplicación</h2>
+      <p>Esta Política se aplica a todos los datos personales que tratamos cuando:</p>
       <ul>
-        <li><strong>Información Personal:</strong> Nombre, correo electrónico, número de teléfono.</li>
-        <li><strong>Datos de Autenticación:</strong> Credenciales almacenadas de forma segura en SecureStore.</li>
-        <li><strong>Datos de Uso:</strong> Analíticas, registros y reportes de fallos.</li>
-        <li><strong>Datos de Chat:</strong> Mensajes intercambiados en salas de chat (encriptados en reposo).</li>
+        <li>Usas nuestra App móvil (en iOS o Android).</li>
+        <li>Interactúas con páginas o recursos enlazados desde la App relacionados con esta Política.</li>
       </ul>
+      <p>
+        En esta Política, “usuario” se refiere a cualquier persona que acceda o utilice la App.
+      </p>
+      <p>
+        Para poder utilizar la App es necesario que aceptes esta Política y nos facilites aquellos datos imprescindibles para prestar el Servicio. Si decides no aceptar algún tratamiento esencial (como la creación de tu perfil o la publicación del mismo), no podremos prestarte el Servicio.
+      </p>
+
+      <h3>2.1. Roles de usuario en Vestal</h3>
+      <p>
+        La App permite dos tipos de uso principales, que determinan qué funcionalidades están disponibles y qué datos son visibles para otros usuarios:
+      </p>
+      <ul>
+        <li>
+          <strong>Buscar habitación (Solicitante):</strong>
+          Usuarios que buscan una vivienda compartida. Pueden aplicar a casas publicadas, ver perfiles de los compañeros actuales de dichas casas y enviar solicitudes para unirse a una vivienda.
+        </li>
+        <li>
+          <strong>Buscar compañero (Compañero de casa):</strong>
+          Usuarios que tienen una habitación disponible en una vivienda y buscan nuevos compañeros. Este rol incluye tanto al usuario principal de la casa como a los compañeros que ya viven en ella y deciden utilizar el Servicio. Estos usuarios pueden ver los perfiles de los solicitantes cuando éstos aplican a su vivienda.
+        </li>
+      </ul>
+
+      <h3>2.2. Código de acceso a viviendas y visibilidad</h3>
+      <p>
+        Cuando un usuario en rol de <strong>Compañero de casa</strong> registra una vivienda en la App,
+        el Servicio genera un <strong>código único de casa</strong> asociado a dicha vivienda.
+        Este código permite que otros usuarios:
+      </p>
+      <ul>
+        <li>Se unan a dicha vivienda como compañeros de casa (en este caso puede requerirse un código PIN adicional), y</li>
+        <li>Envíen solicitudes para unirse a esa vivienda como solicitantes.</li>
+      </ul>
+      <p>
+        Aunque el código es generado técnicamente por Vestal, el <strong>control sobre su uso y difusión</strong>
+        corresponde al usuario <strong>Compañero de casa</strong> que registra la vivienda. Es este usuario quien decide
+        con quién comparte el código y por qué medios (por ejemplo, mensajería privada, redes sociales u otros canales).
+      </p>
+      <p>
+        Vestal no publica ni comunica este código fuera de la App por iniciativa propia. Únicamente
+        procesamos las solicitudes que lleguen a través de un código válido que haya sido compartido por el
+        propio Compañero de casa.
+      </p>
+      <p>
+        Además, al crear o gestionar una vivienda, se preguntará explícitamente al usuario
+        <strong>Compañero de casa</strong> si desea que su casa:
+      </p>
+      <ul>
+        <li>Sea visible también para otros usuarios <strong>Solicitantes</strong> dentro de la App (por ejemplo, en listados o secciones de exploración), o</li>
+        <li>No sea visible de forma general, de modo que solo los usuarios que dispongan del código puedan acceder a la vivienda y/o solicitarla.</li>
+      </ul>
+      <p>
+        El usuario Compañero de casa podrá modificar esta configuración de visibilidad en cualquier momento
+        desde los ajustes de la vivienda. Si elimina la publicación de la casa o modifica su estado de forma que deje
+        de estar disponible, el código dejará de permitir nuevas solicitudes.
+      </p>
+    </section>
+
+    <section data-aos="fade-up" data-aos-delay="350">
+      <h2>3. Qué datos recogemos sobre ti</h2>
+      <p>
+        Organizamos los datos en categorías para facilitar su comprensión. Toda la información
+        que publiques es bajo tu propia responsabilidad. Dada la naturaleza del Servicio, te instamos a ser prudente: cualquier contenido que publiques puede llegar a ser visible para otros usuarios.
+      </p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Categoría</th>
+            <th>Qué incluye</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Datos de Creación de Cuenta</strong></td>
+            <td>
+              <ul>
+                <li>Número de teléfono</li>
+                <li>Código de verificación</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td><strong>Datos de Perfil*</strong></td>
+            <td>
+              <ul>
+                <li>Nombre de usuario</li>
+                <li>Fecha de nacimiento</li>
+                <li>Foto de perfil</li>
+                <li>Identidad de género (opcional)</li>
+                <li>Profesión</li>
+                <li>Idioma</li>
+                <li>Descripción personal</li>
+                <li>Hábitos de convivencia, estilo de vida, horarios</li>
+                <li>Preferencias personales</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td><strong>Datos de Vivienda y Convivencia*</strong></td>
+            <td>
+              <ul>
+                <li>Zona</li>
+                <li>Precio</li>
+                <li>Fotos de vivienda</li>
+                <li>Reglas de convivencia</li>
+                <li>Descripciones y detalles de tu casa</li>
+                <li>Preferencias sobre compañeros</li>
+                <li>Información sobre los convivientes actuales</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td><strong>Contenido Generado por Ti</strong></td>
+            <td>
+              <ul>
+                <li>Mensajes del chat</li>
+                <li>Información incluida en solicitudes o textos libres</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td><strong>Datos de Actividad</strong></td>
+            <td>
+              <ul>
+                <li>Solicitudes enviadas/recibidas</li>
+                <li>Estado (aceptada / rechazada / pendiente)</li>
+                <li>Preferencias sobre compatibilidad</li>
+                <li>Registros de visitas y agenda</li>
+                <li>Compañeros asociados a una casa</li>
+                <li>Usuarios solicitantes a una casa</li>
+                <li>Votos positivos/negativos en solicitudes</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td><strong>Datos Técnicos y del Dispositivo</strong></td>
+            <td>
+              <ul>
+                <li>Dirección IP</li>
+                <li>ID del dispositivo</li>
+                <li>Firebase Installation ID</li>
+                <li>Sistema operativo y versión</li>
+                <li>Idioma del dispositivo</li>
+                <li>Versión de la App</li>
+                <li>Logs de errores</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td><strong>Datos de Uso de la App</strong></td>
+            <td>
+              <ul>
+                <li>Pantallas visitadas</li>
+                <li>Acciones realizadas</li>
+                <li>Fecha y hora de inicio de sesión</li>
+                <li>Interacción con notificaciones</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td><strong>Datos de Comunicaciones</strong></td>
+            <td>
+              <ul>
+                <li>Mensajes enviados al soporte</li>
+                <li>Adjuntos enviados</li>
+                <li>Capturas de pantalla de incidencias</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td><strong>Geolocalización Aproximada</strong></td>
+            <td>
+              <ul>
+                <li>Ciudad/país</li>
+                <li>Información inferida por IP o aportada por ti</li>
+              </ul>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p><em>* Puedes actualizar estas informaciones en cualquier momento desde tu cuenta, salvo la fecha de nacimiento y el número de teléfono, que no son modificables.</em></p>
     </section>
 
     <section data-aos="fade-up" data-aos-delay="400">
-      <h2>Cómo Usamos tus Datos</h2>
-      <p>
-        Utilizamos tu información para:
-      </p>
+      <h2>4. Para qué usamos tus datos y cuál es la base legal</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Finalidad del tratamiento</th>
+            <th>Base legal</th>
+            <th>Categorías usadas</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Prestar el Servicio: crear cuenta, comprobar edad, permitir creación de perfil, uso del Servicio</td>
+            <td>Ejecución de contrato</td>
+            <td>Cuenta, Perfil, Vivienda, Actividad, Contenido</td>
+          </tr>
+          <tr>
+            <td>Mostrar datos opcionales de categoría especial (identidad de género)</td>
+            <td>Consentimiento explícito</td>
+            <td>Perfil</td>
+          </tr>
+          <tr>
+            <td>Solicitudes y matching: mostrar perfiles, mostrar preferencias sobre solicitudes, habilitar chat</td>
+            <td>Ejecución de contrato</td>
+            <td>Perfil, Preferencias, Actividad, Contenido</td>
+          </tr>
+          <tr>
+            <td>Mejorar la App, corregir errores, optimizar rendimiento</td>
+            <td>Interés legítimo*</td>
+            <td>Técnicos, Uso, Actividad</td>
+          </tr>
+          <tr>
+            <td>Proteger la plataforma: seguridad, abuso, fraude</td>
+            <td>Interés legítimo*</td>
+            <td>Técnicos, Uso, Cuenta</td>
+          </tr>
+          <tr>
+            <td>Analítica básica de funcionalidad</td>
+            <td>Interés legítimo*</td>
+            <td>Técnicos, Uso, Dispositivo</td>
+          </tr>
+          <tr>
+            <td>Comunicaciones del servicio (notificaciones operativas)</td>
+            <td>Ejecución de contrato</td>
+            <td>Cuenta, Actividad</td>
+          </tr>
+          <tr>
+            <td>Responder a tus consultas</td>
+            <td>Interés legítimo*</td>
+            <td>Comunicaciones</td>
+          </tr>
+          <tr>
+            <td>Cumplir obligaciones legales</td>
+            <td>Obligación legal</td>
+            <td>Datos necesarios según la normativa</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Interés legítimo</h3>
+      <p>Nuestros intereses legítimos incluyen:</p>
       <ul>
-        <li>Autenticar y autorizar tu acceso.</li>
-        <li>Habilitar chat en tiempo real y agendar visitas.</li>
-        <li>Ofrecer sugerencias de compatibilidad personalizadas.</li>
-        <li>Mejorar y monitorear nuestros servicios.</li>
+        <li>Garantizar la seguridad, prevenir fraudes y abusos.</li>
+        <li>Mejorar la funcionalidad del servicio.</li>
+        <li>Obtener métricas internas para tomar decisiones basadas en rendimiento real.</li>
       </ul>
+      <p>Estos intereses no prevalecen sobre tus derechos. Puedes oponerte en cualquier momento (Art. 21 RGPD).</p>
+
+      <h3>Datos de categoría especial</h3>
+      <p>Para la identidad de género solicitamos consentimiento explícito (Art. 9.2.a RGPD). Puedes retirarlo eliminando ese dato o poniéndote en contacto.</p>
+      <p>Los datos sensibles que publiques voluntariamente en campos de texto o fotos se tratarán bajo la base legal de que tú los has hecho manifiestamente públicos (Art. 9.2.e RGPD).</p>
+
+      <h3>Sobre el matching</h3>
+      <p>
+        Vestal NO utiliza algoritmos automáticos de compatibilidad. Eres tú quien decide con quién quieres convivir revisando manualmente los perfiles y preferencias de otros usuarios. Los compañeros actuales de tu casa pueden ver las preferencias de convivencia de los demás para evaluar la compatibilidad de los solicitantes.
+      </p>
+    </section>
+
+    <section data-aos="fade-up" data-aos-delay="450">
+      <h2>5. Con quién compartimos tus datos</h2>
+      <p>Nunca vendemos tus datos personales. Solo compartimos lo necesario para operar la App.</p>
+
+      <h3>5.1. Otros usuarios</h3>
+      <p>
+        Tu perfil es visible para otros usuarios de la App con el fin de
+        <strong>facilitar el matching y la convivencia</strong>. A continuación resumimos
+        qué tipo de datos pueden ver otros usuarios y en qué contexto:
+      </p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Tipo de datos</th>
+            <th>Quién puede verlo</th>
+            <th>Ejemplos</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Tu perfil personal</strong></td>
+            <td>
+              Usuarios que pueden ver tu perfil (por ejemplo, casas a las que aplicas
+              o personas con las que interactúas dentro de la App).
+            </td>
+            <td>
+              <ul>
+                <li>Nombre de usuario</li>
+                <li>Edad (calculada a partir de tu fecha de nacimiento, no la fecha exacta)</li>
+                <li>Foto(s) de perfil</li>
+                <li>Profesión</li>
+                <li>Identidad de género (solo si has decidido hacerla visible)</li>
+                <li>Descripción personal</li>
+                <li>Hábitos de convivencia, estilo de vida y horarios</li>
+                <li>Preferencias personales</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td><strong>Tu vivienda publicada</strong> (si has registrado una)</td>
+            <td>
+              Usuarios que navegan por viviendas o que aplican a tu casa,
+              según la configuración de visibilidad que hayas elegido (solo mediante código
+              o también visible dentro de la App).
+            </td>
+            <td>
+              <ul>
+                <li>Fotos de la casa</li>
+                <li>Ubicación aproximada (zona/barrio autodeclarado, <strong>nunca la dirección exacta</strong>)</li>
+                <li>Rango de precio</li>
+                <li>Tipo de habitación disponible</li>
+                <li>Descripción y detalles de la vivienda</li>
+                <li>Normas y preferencias de convivencia asociadas a esa casa</li>
+                <li>Preferencias sobre los solicitantes</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td><strong>Información interna entre compañeros de casa</strong></td>
+            <td>
+              Solo los compañeros actuales de una vivienda determinada.
+            </td>
+            <td>
+              <ul>
+                <li>Votos internos sobre solicitantes (positivos / negativos)*</li>
+                <li>Estado de las solicitudes relacionadas con la vivienda</li>
+                <li>Mensajes en el chat grupal con los solicitantes</li>
+              </ul>
+              <p style="margin-top:0.5rem; font-size:1rem;">
+                *Esta información interna <strong>NUNCA es visible para el solicitante</strong> ni para usuarios ajenos a esa vivienda.
+                Las deliberaciones internas sobre los solicitantes están protegidas por la privacidad de los inquilinos actuales.
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td><strong>Datos que nunca se comparten con otros usuarios</strong></td>
+            <td>
+              Ningún otro usuario. Solo Vestal (en la medida en que sea necesario para prestar el Servicio).
+            </td>
+            <td>
+              <ul>
+                <li>Tu número de teléfono</li>
+                <li>Tu fecha de nacimiento exacta</li>
+                <li>Tu dirección completa</li>
+                <li>Mensajes de chat fuera de las conversaciones en las que participas</li>
+              </ul>
+              <p style="margin-top:0.5rem; font-size:1rem;">
+                Los mensajes de chat solo son visibles para los participantes de cada conversación
+                y nunca se hacen públicos para el resto de usuarios de la App.
+              </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p><strong>Importante:</strong> No compartas información sensible o personal (como datos bancarios, dirección exacta o documentos de identidad) en tu perfil público, en descripciones o en el chat. Vestal no se hace responsable del uso indebido de la información que decidas publicar voluntariamente.</p>
+
+      <p><strong>Nota sobre geolocalización:</strong>
+        La App NO accede a tu ubicación GPS en tiempo real. La zona/barrio que aparece en tu perfil
+        o en las publicaciones de vivienda es exclusivamente la que tú declares manualmente.
+        Otros usuarios NO pueden ver tu dirección exacta ni tu ubicación en tiempo real.
+      </p>
+
+      <p><strong>Nota importante sobre chats:</strong>
+        Los chats en Vestal están asociados a las viviendas, no a los usuarios individuales. Esto permite
+        mantener la continuidad en la comunicación del grupo incluso cuando hay cambios de compañeros.
+        Si eliminas tu cuenta, tus mensajes en chats de casas donde hayas vivido permanecerán visibles
+        para los compañeros actuales y futuros de esa vivienda.
+      </p>
+
+      <h3>5.2. Proveedores de servicios (encargados del tratamiento)</h3>
+      <p>Todos ellos actúan bajo contrato conforme al Art. 28 RGPD.</p>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Categoría</th>
+            <th>Proveedor</th>
+            <th>Finalidad</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Infraestructura y base de datos</td>
+            <td>Firebase Cloud Functions</td>
+            <td>Alojamiento de backend y BD</td>
+          </tr>
+          <tr>
+            <td>Autenticación, Notificaciones, Firestore</td>
+            <td>Google Firebase</td>
+            <td>Auth, BD, notificaciones push</td>
+          </tr>
+          <tr>
+            <td>Analítica</td>
+            <td>Google Analytics for Firebase</td>
+            <td>Métricas y eventos de uso</td>
+          </tr>
+          <tr>
+            <td>Verificación por SMS</td>
+            <td>Firebase Authentication</td>
+            <td>Envío del código de verificación</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>5.3. Moderación, seguridad y abuso</h3>
+      <p>Podemos revisar perfiles, fotos o mensajes únicamente cuando sea necesario para: investigar fraude o abuso, proteger a otros usuarios o cumplir obligaciones legales. El acceso está estrictamente limitado.</p>
+
+      <h3>5.4. Autoridades legales</h3>
+      <p>Compartiremos datos cuando lo exija la ley, debamos responder a un requerimiento judicial o debamos investigar fraude o abuso.</p>
+
+      <h3>5.5. Operaciones corporativas</h3>
+      <p>En caso de fusión, venta o reestructuración, tus datos podrán transferirse a la nueva entidad bajo las mismas garantías.</p>
     </section>
 
     <section data-aos="fade-up" data-aos-delay="500">
-      <h2>Compartir y Divulgación de Datos</h2>
+      <h2>6. Transferencias internacionales</h2>
       <p>
-        No vendemos tus datos personales. Podemos compartir información con:
+        Nuestros proveedores pueden estar dentro o fuera de la UE. Nuestros servidores principales y bases de datos se encuentran en centros de datos situados en la UE. 
+        Aseguramos tu protección mediante:
       </p>
       <ul>
-        <li>Proveedores de servicios bajo contrato (alojamiento, analítica).</li>
-        <li>Autoridades legales cuando sea requerido por ley.</li>
+        <li>Destinos con decisión de adecuación, o</li>
+        <li>Cláusulas Contractuales Estándar de la Comisión Europea (SCCs).</li>
       </ul>
+      <p>El caso de Google/Firebase se gestiona mediante SCCs y medidas adicionales.</p>
+    </section>
+
+    <section data-aos="fade-up" data-aos-delay="550">
+      <h2>7. Tecnologías de análisis y seguimiento</h2>
+      <p>La App no utiliza cookies, pero sí identificadores técnicos como:</p>
+      <ul>
+        <li>Firebase Installation ID</li>
+        <li>ID de dispositivo</li>
+        <li>Eventos de Firebase Analytics</li>
+      </ul>
+      <p>Se usan exclusivamente para: mejorar estabilidad, comprender usos de la App y corregir errores. Nunca para publicidad ni rastreo comercial. Cuando sea legalmente necesario, pediremos tu consentimiento antes de activar analítica no esencial.</p>
     </section>
 
     <section data-aos="fade-up" data-aos-delay="600">
-      <h2>Tus Derechos</h2>
+      <h2>8. Notificaciones push</h2>
+      <p>La App puede enviarte notificaciones push para informarte sobre:</p>
       <ul>
-        <li>Acceder, corregir o eliminar tu información personal.</li>
-        <li>Retirar tu consentimiento en cualquier momento.</li>
-        <li>Optar por no recibir comunicaciones no esenciales.</li>
+          <li>Nuevas solicitudes de convivencia en casas que gestionas.</li>
+          <li>Mensajes en el chat de tu vivienda.</li>
+          <li>Votos de tus compañeros sobre solicitantes.</li>
+          <li>Respuestas a tus solicitudes (aceptadas/rechazadas).</li>
+          <li>Actualizaciones importantes del servicio.</li>
+          <li>Recordatorios de visitas agendadas.</li>
       </ul>
-      <p>
-        Si deseas eliminar tu cuenta y todos tus datos de manera segura y permanente, 
-        puedes hacerlo siguiendo las instrucciones en nuestra página de 
-        <a href="delete-account.html" style="color:#4C2818; font-weight:bold;">Eliminar tu Cuenta</a>.
-      </p>
+
+      <p>Para poder recibir notificaciones, la App solicitará tu consentimiento explícito la primera vez que la uses. Puedes desactivarlas en cualquier momento desde:</p>
+      <ul>
+          <li>La configuración de tu dispositivo (iOS o Android), o</li>
+          <li>Desde los ajustes de la App.</li>
+      </ul>
+
+      <p><strong>Nota:</strong> El token de notificaciones se utiliza exclusivamente para este fin y no se comparte con terceros con fines publicitarios.</p>
+
+      <p><strong>Base legal:</strong> Consentimiento (Art. 6.1.a RGPD) y ejecución del contrato para notificaciones esenciales del servicio (como nuevas solicitudes o mensajes de compañeros).</p>
+    </section>
+
+    <section data-aos="fade-up" data-aos-delay="650">
+      <h2>9. Encuestas, testimonios y colaboraciones</h2>
+      <p>Ocasionalmente te invitaremos a participar en encuestas, testimonios o aportaciones de marketing. Tu participación es voluntaria. Si no deseas recibir invitaciones, puedes comunicarlo al responsable del tratamiento.</p>
     </section>
 
     <section data-aos="fade-up" data-aos-delay="700">
-      <h2>Contáctanos</h2>
+      <h2>10. Conservación de datos</h2>
+      <ul>
+        <li>Datos de cuenta y perfil: mientras tu cuenta esté activa.</li>
+        <li>Tras borrar tu cuenta: tus datos se bloquean durante 30 días por si hubiera incidencias o reclamaciones y, pasado ese plazo, se eliminan o se anonimizan.</li>
+        <li>Información para prevención de fraude o baneos: hasta 2 años.</li>
+        <li>Conservación por motivos legales: hasta 5 años.</li>
+      </ul>
+      <p>Si el usuario que se va era el único propietario/creador de la publicación de una vivienda, debe transferir la propiedad a otro compañero o la publicación se eliminará.</p>
+      <p>Por motivos de integridad del historial de las viviendas, los mensajes de chat asociados a casas donde hayas participado pueden permanecer visibles para otros compañeros.
+        El Servicio no puede garantizar la eliminación de los datos personales incluidos voluntariamente en el cuerpo del texto de los mensajes enviados a otros usuarios.
+      </p>
+      <p>Si no accedes a tu cuenta durante un periodo continuado de 12 meses, podremos eliminarla por inactividad.</p>
+    </section>
+
+    <section data-aos="fade-up" data-aos-delay="750">
+      <h2>11. Usuarios menores de edad</h2>
+      <p>El Servicio está limitado a personas mayores de 18 años. Solicitamos tu fecha de nacimiento durante el registro y eliminaremos las cuentas que detectemos que pertenecen a menores.</p>
+      <p>El Servicio implementa medidas razonables para verificar la edad, pero no puede garantizar la veracidad absoluta de la edad declarada por los usuarios.</p>
+    </section>
+
+    <section data-aos="fade-up" data-aos-delay="800">
+      <h2>12. Tus derechos</h2>
+      <p>Puedes ejercer los siguientes derechos según el RGPD:</p>
+      <ul>
+        <li>Acceso</li>
+        <li>Rectificación</li>
+        <li>Supresión</li>
+        <li>Oposición</li>
+        <li>Limitación</li>
+        <li>Portabilidad</li>
+        <li>Retirada del consentimiento</li>
+      </ul>
+      <p>Te responderemos en un plazo máximo de 1 mes.</p>
       <p>
-        Si tienes preguntas sobre esta Política de Privacidad, contáctanos en
-        <a href="mailto:privacy@vestal.app">privacy@vestal.app</a>.
+        📩 Para ejercerlos, escríbenos a: <a href="mailto:vestal.theapp@gmail.com">vestal.theapp@gmail.com</a><br/>
+        También puedes reclamar ante tu autoridad local de protección de datos. En España: AEPD
+        (<a href="https://www.aepd.es" target="_blank" rel="noopener noreferrer">www.aepd.es</a>).
       </p>
     </section>
+
+    <section data-aos="fade-up" data-aos-delay="825">
+      <h2>12.1. Cómo Eliminar tu Cuenta</h2>
+      <p>
+        Si deseas eliminar permanentemente tu cuenta de Vestal y todos los datos asociados, puedes hacerlo en cualquier momento 
+        siguiendo las instrucciones de nuestra página dedicada: 
+        <a href="delete-account.html">Eliminar tu Cuenta</a>.
+      </p>
+      <p>
+        Una vez completado el proceso de eliminación, tus datos serán eliminados de nuestros servidores como se describe en 
+        la sección 10 (Conservación de datos) de esta política.
+      </p>
+    </section>
+
+    <section data-aos="fade-up" data-aos-delay="850">
+      <h2>13. Seguridad</h2>
+      <p>Aplicamos medidas técnicas y organizativas adecuadas, incluyendo:</p>
+      <ul>
+        <li>Cifrado</li>
+        <li>Control de accesos internos</li>
+        <li>Monitorización</li>
+        <li>Aislamiento de entornos</li>
+        <li>Copias de seguridad seguras</li>
+      </ul>
+      <p>Ningún sistema es infalible, pero actuaremos rápidamente ante cualquier incidente.</p>
+    </section>
+
+    <section data-aos="fade-up" data-aos-delay="900">
+      <h2>14. Cambios en esta Política</h2>
+      <p>Podemos actualizar esta Política en cualquier momento. Cuando haya cambios importantes, te lo notificaremos en la App.</p>
+    </section>
+
   </main>
 
-  <footer data-aos="fade-up" data-aos-delay="800">
+  <footer data-aos="fade-up" data-aos-delay="950">
     <p>&copy; 2025 Vestal. Todos los derechos reservados.</p>
   </footer>
 
   <script>
-    AOS.init({
-      once: true,
-      duration: 600,
-      easing: 'ease-out-cubic'
-    });
+    AOS.init({ once: true, duration: 600, easing: 'ease-out-cubic' });
   </script>
 </body>
 </html>
