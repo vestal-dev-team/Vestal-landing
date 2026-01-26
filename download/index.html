@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Descargar Vestal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cardo:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(135deg, #F8F5EE 0%, #EEE4D0 50%, #F8F5EE 100%);
+      color: #4C2818;
+      min-height: 100vh;
+      min-height: 100dvh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+      animation: fadeIn 0.6s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .logo {
+      width: 120px;
+      height: auto;
+      filter: drop-shadow(0 4px 12px rgba(76, 40, 24, 0.15));
+    }
+
+    h1 {
+      font-family: 'Cardo', serif;
+      font-size: clamp(2.5rem, 8vw, 4rem);
+      margin-bottom: 0.25rem;
+    }
+
+    .subtitle {
+      font-size: clamp(1rem, 3vw, 1.25rem);
+      color: #6B4A35;
+      font-weight: 300;
+      margin-bottom: 1rem;
+    }
+
+    .download-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      width: 100%;
+      max-width: 320px;
+    }
+
+    .download-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      padding: 1.25rem 2rem;
+      border-radius: 16px;
+      text-decoration: none;
+      font-size: 1.1rem;
+      font-weight: 600;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 0 4px 15px rgba(76, 40, 24, 0.1);
+    }
+
+    .download-btn:active {
+      transform: scale(0.98);
+    }
+
+    .download-btn img {
+      width: 32px;
+      height: 32px;
+    }
+
+    .download-btn.apple {
+      background: #4C2818;
+      color: #F8F5EE;
+    }
+
+    .download-btn.apple:hover {
+      background: #3A1E12;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(76, 40, 24, 0.25);
+    }
+
+    .download-btn.apple img {
+      filter: brightness(0) invert(1);
+    }
+
+    .download-btn.android {
+      background: #F8F5EE;
+      color: #4C2818;
+      border: 2px solid #4C2818;
+    }
+
+    .download-btn.android:hover {
+      background: #EEE4D0;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(76, 40, 24, 0.2);
+    }
+
+    .home-link {
+      margin-top: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      text-decoration: none;
+      color: #6B4A35;
+      font-size: 0.9rem;
+      transition: all 0.3s ease;
+      opacity: 0.8;
+    }
+
+    .home-link:hover {
+      opacity: 1;
+      transform: translateY(-2px);
+    }
+
+    .home-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(76, 40, 24, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.3s ease;
+    }
+
+    .home-link:hover .home-icon {
+      background: rgba(76, 40, 24, 0.2);
+    }
+
+    .home-icon svg {
+      width: 20px;
+      height: 20px;
+      fill: #4C2818;
+    }
+
+    /* Desktop enhancements */
+    @media (min-width: 600px) {
+      .download-buttons {
+        flex-direction: row;
+        max-width: 500px;
+        gap: 1.5rem;
+      }
+
+      .download-btn {
+        flex: 1;
+        padding: 1.5rem 1.5rem;
+      }
+
+      .logo {
+        width: 150px;
+      }
+    }
+
+    /* Extra touch feedback for mobile */
+    @media (hover: none) {
+      .download-btn:active {
+        transform: scale(0.96);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="../assets/happy.png" alt="Logo Vestal" class="logo" />
+    <h1>Vestal</h1>
+    <p class="subtitle">Encuentra tu compañero de piso ideal</p>
+
+    <div class="download-buttons">
+      <a href="https://apps.apple.com/app/vestal-tu-hogar-tu-llama/id6748609704" target="_blank" class="download-btn apple" aria-label="Descargar en App Store">
+        <img src="../assets/apple.svg" alt="Apple" />
+        <span>App Store</span>
+      </a>
+      <a href="https://play.google.com/store/apps/details?id=com.vestal.app" target="_blank" class="download-btn android" aria-label="Descargar en Google Play">
+        <img src="../assets/android.svg" alt="Android" />
+        <span>Google Play</span>
+      </a>
+    </div>
+
+    <a href="/" class="home-link">
+      <div class="home-icon">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+        </svg>
+      </div>
+      <span>Más información</span>
+    </a>
+  </div>
+</body>
+</html>

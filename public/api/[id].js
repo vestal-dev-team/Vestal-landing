@@ -27,8 +27,8 @@ export default function handler(req, res) {
   const isIOS = /iphone|ipad|ipod/.test(ua);
   const isMobile = isAndroid || isIOS;
 
-  const appStoreURL = `https://apps.apple.com/es/app/marca-diario-deportivo/id312407627`;
-  const playStoreURL = `https://play.google.com/store/apps/details?id=com.iphonedroid.marca`;
+  const appStoreURL = `https://apps.apple.com/es/app/vestal-tu-hogar-tu-llama/id6748609704`;
+  const playStoreURL = `https://play.google.com/store/apps/details?id=com.vestal.app`;
 
   // Intent URL específico de Android/Chrome con fallback nativo a Play Store
   const intentURL =
